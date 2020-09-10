@@ -6,7 +6,7 @@
     <IsPackable>true</IsPackable>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>0.2.0</Version>
+    <Version>0.2.1</Version>
     <Authors>Roman Suslikov</Authors>
     <Product>Configuration</Product>
     <Copyright>Roman Suslikov</Copyright>
@@ -14,7 +14,7 @@
     <RepositoryUrl>https://github.com/Assistants-org/Assistant</RepositoryUrl>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <RepositoryType>git</RepositoryType>
-    <ReleaseVersion>0.2.0</ReleaseVersion>
+    <ReleaseVersion>0.2.1</ReleaseVersion>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">

@@ -1,26 +1,13 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workbench ActiveDocument="Sources/Commands/Managers/CommandsManager.cs">
     <Files>
-      <File FileName="Sources/Commands/Managers/CommandsManager.cs" Line="24" Column="50" />
+      <File FileName="Sources/Commands/Managers/CommandsManager.cs" Line="67" Column="63" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Assistant" expanded="True">
-            <Node name="Assistant" expanded="True">
-              <Node name="Core" expanded="True">
-                <Node name="Facade" expanded="True">
-                  <Node name="Commands" expanded="True" />
-                </Node>
-              </Node>
-              <Node name="Infrastructure" expanded="True">
-                <Node name="Commands" expanded="True">
-                  <Node name="Managers" expanded="True">
-                    <Node name="CommandsManager.cs" selected="True" />
-                  </Node>
-                </Node>
-              </Node>
-            </Node>
+          <Node name="Assistant" expanded="True" selected="True">
+            <Node name="Assistant" expanded="True" />
           </Node>
         </State>
       </Pad>
