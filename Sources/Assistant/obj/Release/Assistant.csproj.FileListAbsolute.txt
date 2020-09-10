@@ -1,0 +1,10 @@
+/Users/romans/Documents/GitHub/AssistantS/Sources/Build/Release/Assistant.deps.json
+/Users/romans/Documents/GitHub/AssistantS/Sources/Build/Release/Assistant.dll
+/Users/romans/Documents/GitHub/AssistantS/Sources/Build/Release/Assistant.pdb
+/Users/romans/Documents/GitHub/AssistantS/Sources/Assistant/obj/Release/Assistant.csprojAssemblyReference.cache
+/Users/romans/Documents/GitHub/AssistantS/Sources/Assistant/obj/Release/Assistant.AssemblyInfoInputs.cache
+/Users/romans/Documents/GitHub/AssistantS/Sources/Assistant/obj/Release/Assistant.AssemblyInfo.cs
+/Users/romans/Documents/GitHub/AssistantS/Sources/Assistant/obj/Release/Assistant.csproj.CoreCompileInputs.cache
+/Users/romans/Documents/GitHub/AssistantS/Sources/Assistant/obj/Release/Assistant.csproj.CopyComplete
+/Users/romans/Documents/GitHub/AssistantS/Sources/Assistant/obj/Release/Assistant.dll
+/Users/romans/Documents/GitHub/AssistantS/Sources/Assistant/obj/Release/Assistant.pdb

@@ -1,13 +1,18 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="../../../../../Library/Frameworks/Mono.framework/Versions/6.12.0/lib/mono/msbuild/Current/bin/Microsoft.Common.CurrentVersion.targets">
+    <Files>
+      <File FileName="../../../../../usr/local/share/dotnet/sdk/3.1.401/Sdks/NuGet.Build.Tasks.Pack/build/NuGet.Build.Tasks.Pack.targets" Line="193" Column="11" />
+      <File FileName="../../../../../Library/Frameworks/Mono.framework/Versions/6.12.0/lib/mono/msbuild/Current/bin/Microsoft.Common.CurrentVersion.targets" Line="1877" Column="43" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Assistant" expanded="True">
             <Node name="Assistant" expanded="True">
               <Node name="Core" expanded="True" />
-              <Node name="Infrastructure" expanded="True">
-                <Node name="Commands" selected="True" />
+              <Node name="Infrastructure" expanded="True" />
+              <Node name="Presentation" expanded="True">
+                <Node name="Assistant" selected="True" />
               </Node>
             </Node>
           </Node>
@@ -16,7 +21,7 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

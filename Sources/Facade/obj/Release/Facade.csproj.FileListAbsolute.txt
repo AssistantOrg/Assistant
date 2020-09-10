@@ -1,0 +1,9 @@
+/Users/romans/Documents/GitHub/AssistantS/Sources/Build/Release/Facade.deps.json
+/Users/romans/Documents/GitHub/AssistantS/Sources/Build/Release/Facade.dll
+/Users/romans/Documents/GitHub/AssistantS/Sources/Build/Release/Facade.pdb
+/Users/romans/Documents/GitHub/AssistantS/Sources/Facade/obj/Release/Facade.csprojAssemblyReference.cache
+/Users/romans/Documents/GitHub/AssistantS/Sources/Facade/obj/Release/Facade.AssemblyInfoInputs.cache
+/Users/romans/Documents/GitHub/AssistantS/Sources/Facade/obj/Release/Facade.AssemblyInfo.cs
+/Users/romans/Documents/GitHub/AssistantS/Sources/Facade/obj/Release/Facade.csproj.CoreCompileInputs.cache
+/Users/romans/Documents/GitHub/AssistantS/Sources/Facade/obj/Release/Facade.dll
+/Users/romans/Documents/GitHub/AssistantS/Sources/Facade/obj/Release/Facade.pdb

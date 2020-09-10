@@ -1,0 +1,10 @@
+/Users/romans/Documents/GitHub/AssistantS/Sources/Build/Release/Messages.deps.json
+/Users/romans/Documents/GitHub/AssistantS/Sources/Build/Release/Messages.dll
+/Users/romans/Documents/GitHub/AssistantS/Sources/Build/Release/Messages.pdb
+/Users/romans/Documents/GitHub/AssistantS/Sources/Messages/obj/Release/Messages.csprojAssemblyReference.cache
+/Users/romans/Documents/GitHub/AssistantS/Sources/Messages/obj/Release/Messages.AssemblyInfoInputs.cache
+/Users/romans/Documents/GitHub/AssistantS/Sources/Messages/obj/Release/Messages.AssemblyInfo.cs
+/Users/romans/Documents/GitHub/AssistantS/Sources/Messages/obj/Release/Messages.csproj.CoreCompileInputs.cache
+/Users/romans/Documents/GitHub/AssistantS/Sources/Messages/obj/Release/Messages.csproj.CopyComplete
+/Users/romans/Documents/GitHub/AssistantS/Sources/Messages/obj/Release/Messages.dll
+/Users/romans/Documents/GitHub/AssistantS/Sources/Messages/obj/Release/Messages.pdb

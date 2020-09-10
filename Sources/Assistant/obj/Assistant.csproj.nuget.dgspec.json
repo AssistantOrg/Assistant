@@ -1,0 +1,373 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/romans/Documents/GitHub/AssistantS/Sources/Assistant/Assistant.csproj": {}
+  },
+  "projects": {
+    "/Users/romans/Documents/GitHub/AssistantS/Sources/Application/Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/romans/Documents/GitHub/AssistantS/Sources/Application/Application.csproj",
+        "projectName": "Application",
+        "projectPath": "/Users/romans/Documents/GitHub/AssistantS/Sources/Application/Application.csproj",
+        "packagesPath": "/Users/romans/.nuget/packages/",
+        "outputPath": "/Users/romans/Documents/GitHub/AssistantS/Sources/Application/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/romans/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.401/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/romans/Documents/GitHub/AssistantS/Sources/Assistant/Assistant.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/romans/Documents/GitHub/AssistantS/Sources/Assistant/Assistant.csproj",
+        "projectName": "Assistant",
+        "projectPath": "/Users/romans/Documents/GitHub/AssistantS/Sources/Assistant/Assistant.csproj",
+        "packagesPath": "/Users/romans/.nuget/packages/",
+        "outputPath": "/Users/romans/Documents/GitHub/AssistantS/Sources/Assistant/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/romans/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "/Users/romans/Documents/GitHub/AssistantS/Sources/Application/Application.csproj": {
+                "projectPath": "/Users/romans/Documents/GitHub/AssistantS/Sources/Application/Application.csproj"
+              },
+              "/Users/romans/Documents/GitHub/AssistantS/Sources/Commands/Commands.csproj": {
+                "projectPath": "/Users/romans/Documents/GitHub/AssistantS/Sources/Commands/Commands.csproj"
+              },
+              "/Users/romans/Documents/GitHub/AssistantS/Sources/Configuration/Configuration.csproj": {
+                "projectPath": "/Users/romans/Documents/GitHub/AssistantS/Sources/Configuration/Configuration.csproj"
+              },
+              "/Users/romans/Documents/GitHub/AssistantS/Sources/Facade/Facade.csproj": {
+                "projectPath": "/Users/romans/Documents/GitHub/AssistantS/Sources/Facade/Facade.csproj"
+              },
+              "/Users/romans/Documents/GitHub/AssistantS/Sources/Messages/Messages.csproj": {
+                "projectPath": "/Users/romans/Documents/GitHub/AssistantS/Sources/Messages/Messages.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.401/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/romans/Documents/GitHub/AssistantS/Sources/Commands/Commands.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/romans/Documents/GitHub/AssistantS/Sources/Commands/Commands.csproj",
+        "projectName": "Commands",
+        "projectPath": "/Users/romans/Documents/GitHub/AssistantS/Sources/Commands/Commands.csproj",
+        "packagesPath": "/Users/romans/.nuget/packages/",
+        "outputPath": "/Users/romans/Documents/GitHub/AssistantS/Sources/Commands/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/romans/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "/Users/romans/Documents/GitHub/AssistantS/Sources/Application/Application.csproj": {
+                "projectPath": "/Users/romans/Documents/GitHub/AssistantS/Sources/Application/Application.csproj"
+              },
+              "/Users/romans/Documents/GitHub/AssistantS/Sources/Facade/Facade.csproj": {
+                "projectPath": "/Users/romans/Documents/GitHub/AssistantS/Sources/Facade/Facade.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.401/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/romans/Documents/GitHub/AssistantS/Sources/Configuration/Configuration.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/romans/Documents/GitHub/AssistantS/Sources/Configuration/Configuration.csproj",
+        "projectName": "Configuration",
+        "projectPath": "/Users/romans/Documents/GitHub/AssistantS/Sources/Configuration/Configuration.csproj",
+        "packagesPath": "/Users/romans/.nuget/packages/",
+        "outputPath": "/Users/romans/Documents/GitHub/AssistantS/Sources/Configuration/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/romans/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "/Users/romans/Documents/GitHub/AssistantS/Sources/Application/Application.csproj": {
+                "projectPath": "/Users/romans/Documents/GitHub/AssistantS/Sources/Application/Application.csproj"
+              },
+              "/Users/romans/Documents/GitHub/AssistantS/Sources/Commands/Commands.csproj": {
+                "projectPath": "/Users/romans/Documents/GitHub/AssistantS/Sources/Commands/Commands.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.401/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/romans/Documents/GitHub/AssistantS/Sources/Facade/Facade.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/romans/Documents/GitHub/AssistantS/Sources/Facade/Facade.csproj",
+        "projectName": "Facade",
+        "projectPath": "/Users/romans/Documents/GitHub/AssistantS/Sources/Facade/Facade.csproj",
+        "packagesPath": "/Users/romans/.nuget/packages/",
+        "outputPath": "/Users/romans/Documents/GitHub/AssistantS/Sources/Facade/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/romans/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.401/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/romans/Documents/GitHub/AssistantS/Sources/Messages/Messages.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/romans/Documents/GitHub/AssistantS/Sources/Messages/Messages.csproj",
+        "projectName": "Messages",
+        "projectPath": "/Users/romans/Documents/GitHub/AssistantS/Sources/Messages/Messages.csproj",
+        "packagesPath": "/Users/romans/.nuget/packages/",
+        "outputPath": "/Users/romans/Documents/GitHub/AssistantS/Sources/Messages/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/romans/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "/Users/romans/Documents/GitHub/AssistantS/Sources/Application/Application.csproj": {
+                "projectPath": "/Users/romans/Documents/GitHub/AssistantS/Sources/Application/Application.csproj"
+              },
+              "/Users/romans/Documents/GitHub/AssistantS/Sources/Facade/Facade.csproj": {
+                "projectPath": "/Users/romans/Documents/GitHub/AssistantS/Sources/Facade/Facade.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.Azure.CognitiveServices.Search.CustomSearch": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.401/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

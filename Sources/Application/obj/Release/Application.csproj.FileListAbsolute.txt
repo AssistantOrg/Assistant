@@ -1,0 +1,8 @@
+/Users/romans/Documents/GitHub/AssistantS/Sources/Build/Release/Application.deps.json
+/Users/romans/Documents/GitHub/AssistantS/Sources/Build/Release/Application.dll
+/Users/romans/Documents/GitHub/AssistantS/Sources/Build/Release/Application.pdb
+/Users/romans/Documents/GitHub/AssistantS/Sources/Application/obj/Release/Application.AssemblyInfoInputs.cache
+/Users/romans/Documents/GitHub/AssistantS/Sources/Application/obj/Release/Application.AssemblyInfo.cs
+/Users/romans/Documents/GitHub/AssistantS/Sources/Application/obj/Release/Application.csproj.CoreCompileInputs.cache
+/Users/romans/Documents/GitHub/AssistantS/Sources/Application/obj/Release/Application.dll
+/Users/romans/Documents/GitHub/AssistantS/Sources/Application/obj/Release/Application.pdb

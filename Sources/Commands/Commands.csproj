@@ -3,10 +3,26 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <RootNamespace>Assistant.Commands</RootNamespace>
-    <ReleaseVersion>0.1.0</ReleaseVersion>
-    <PackOnBuild>true</PackOnBuild>
+    <ReleaseVersion>0.1.1</ReleaseVersion>
+    <PackageId>Assistant.Commands</PackageId>
+    <PackageVersion>0.1.1</PackageVersion>
+    <Authors>Roman Suslikov</Authors>
+    <DevelopmentDependency>true</DevelopmentDependency>
+    <PackageLicenseUrl>https://github.com/Assistants-org/Assistant/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <Owners>Roman Suslikov</Owners>
+    <PackageProjectUrl>https://github.com/Assistants-org/Assistant/blob/master</PackageProjectUrl>
+    <Title>Assistant.Commands</Title>
   </PropertyGroup>
 
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\Build\Debug</OutputPath>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>..\Build\Release</OutputPath>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+  </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\Application\Application.csproj" />
     <ProjectReference Include="..\Facade\Facade.csproj" />

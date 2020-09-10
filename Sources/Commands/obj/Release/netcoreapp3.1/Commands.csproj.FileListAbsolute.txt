@@ -1,0 +1,17 @@
+/Users/romans/Documents/GitHub/AssistantS/Sources/Commands/bin/Release/netcoreapp3.1/Commands.deps.json
+/Users/romans/Documents/GitHub/AssistantS/Sources/Commands/bin/Release/netcoreapp3.1/Commands.dll
+/Users/romans/Documents/GitHub/AssistantS/Sources/Commands/bin/Release/netcoreapp3.1/Commands.pdb
+/Users/romans/Documents/GitHub/AssistantS/Sources/Commands/bin/Release/netcoreapp3.1/Application.dll
+/Users/romans/Documents/GitHub/AssistantS/Sources/Commands/bin/Release/netcoreapp3.1/Facade.dll
+/Users/romans/Documents/GitHub/AssistantS/Sources/Commands/bin/Release/netcoreapp3.1/Application.pdb
+/Users/romans/Documents/GitHub/AssistantS/Sources/Commands/bin/Release/netcoreapp3.1/Facade.pdb
+/Users/romans/Documents/GitHub/AssistantS/Sources/Commands/obj/Release/netcoreapp3.1/Commands.csprojAssemblyReference.cache
+/Users/romans/Documents/GitHub/AssistantS/Sources/Commands/obj/Release/netcoreapp3.1/Commands.AssemblyInfoInputs.cache
+/Users/romans/Documents/GitHub/AssistantS/Sources/Commands/obj/Release/netcoreapp3.1/Commands.AssemblyInfo.cs
+/Users/romans/Documents/GitHub/AssistantS/Sources/Commands/obj/Release/netcoreapp3.1/Commands.csproj.CoreCompileInputs.cache
+/Users/romans/Documents/GitHub/AssistantS/Sources/Commands/obj/Release/netcoreapp3.1/Commands.csproj.CopyComplete
+/Users/romans/Documents/GitHub/AssistantS/Sources/Commands/obj/Release/netcoreapp3.1/Commands.dll
+/Users/romans/Documents/GitHub/AssistantS/Sources/Commands/obj/Release/netcoreapp3.1/Commands.pdb
+/Users/romans/Documents/GitHub/AssistantS/Sources/Build/Release/netcoreapp3.1/Commands.deps.json
+/Users/romans/Documents/GitHub/AssistantS/Sources/Build/Release/netcoreapp3.1/Commands.dll
+/Users/romans/Documents/GitHub/AssistantS/Sources/Build/Release/netcoreapp3.1/Commands.pdb

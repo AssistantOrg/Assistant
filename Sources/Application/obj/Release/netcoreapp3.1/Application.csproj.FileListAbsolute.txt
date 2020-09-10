@@ -1,0 +1,11 @@
+/Users/romans/Documents/GitHub/AssistantS/Sources/Application/bin/Release/netcoreapp3.1/Application.deps.json
+/Users/romans/Documents/GitHub/AssistantS/Sources/Application/bin/Release/netcoreapp3.1/Application.dll
+/Users/romans/Documents/GitHub/AssistantS/Sources/Application/bin/Release/netcoreapp3.1/Application.pdb
+/Users/romans/Documents/GitHub/AssistantS/Sources/Application/obj/Release/netcoreapp3.1/Application.AssemblyInfoInputs.cache
+/Users/romans/Documents/GitHub/AssistantS/Sources/Application/obj/Release/netcoreapp3.1/Application.AssemblyInfo.cs
+/Users/romans/Documents/GitHub/AssistantS/Sources/Application/obj/Release/netcoreapp3.1/Application.csproj.CoreCompileInputs.cache
+/Users/romans/Documents/GitHub/AssistantS/Sources/Application/obj/Release/netcoreapp3.1/Application.dll
+/Users/romans/Documents/GitHub/AssistantS/Sources/Application/obj/Release/netcoreapp3.1/Application.pdb
+/Users/romans/Documents/GitHub/AssistantS/Sources/Build/Release/netcoreapp3.1/Application.deps.json
+/Users/romans/Documents/GitHub/AssistantS/Sources/Build/Release/netcoreapp3.1/Application.dll
+/Users/romans/Documents/GitHub/AssistantS/Sources/Build/Release/netcoreapp3.1/Application.pdb
