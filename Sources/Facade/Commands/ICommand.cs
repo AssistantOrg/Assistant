@@ -7,6 +7,6 @@ namespace Assistant.Facade.Commands
     {
         public ICommandInfo Info { get; }
 
-        public IAssistantMessage Excute(IAssistantContext context);
+        public IAssistantMessage Execute(IAssistantContext context);
     }
 }

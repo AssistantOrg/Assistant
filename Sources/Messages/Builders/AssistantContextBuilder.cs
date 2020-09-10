@@ -37,7 +37,7 @@ namespace Assistant.Messages.Builders
             // create context
             var ctx = new AssistantContext();
 
-            if (_text == string.Empty || _text == null)
+            if (string.IsNullOrEmpty(_text))
             {
                 throw new AssistantException("in assistant context builder text is null or empty");
             }
@@ -50,18 +50,13 @@ namespace Assistant.Messages.Builders
                 ctx.Message.CommandKey = ctx.Message.TextKey.ToArray()
                     .Skip(ctx.Message.ExcuteAssistantKey.ToArray().Length);
             }
-            catch (Exception ex)
+            catch (AssistantException)
             {
-                // if value is bad and ast error return null 
-                if (ex is AssistantException)
-                {
-                    // Console.WriteLine(ex.Message);
-                    return null;
-                }
-                else
-                {
-                    throw ex;
-                }
+
+            }
+            catch (Exception)
+            {
+                throw;
             }
 
             // out context

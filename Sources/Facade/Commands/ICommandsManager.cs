@@ -12,10 +12,14 @@ namespace Assistant.Facade.Commands
 
         public IEnumerable<ICommandFindResult> FindCommands(IAssistantContext context);
 
-        public IAssistantMessage TryExcuteCommands(IEnumerable<ICommandFindResult> commands);
+        public IAssistantMessage TryExecuteCommands(IAssistantContext context, IEnumerable<ICommandFindResult> commands);
+
+        public IAssistantMessage TryFindAndExecuteCommands(IAssistantContext context);
 
         public Task<IEnumerable<ICommandFindResult>> FindCommandsAsync(IAssistantContext context);
 
-        public Task<IAssistantMessage> TryExcuteCommandsAsync(IEnumerable<ICommandFindResult> commands);
+        public Task<IAssistantMessage> TryExecuteCommandsAsync(IAssistantContext context, IEnumerable<ICommandFindResult> commands);
+
+        public Task<IAssistantMessage> TryFindAndExecuteCommandsAsync(IAssistantContext context);
     }
 }
