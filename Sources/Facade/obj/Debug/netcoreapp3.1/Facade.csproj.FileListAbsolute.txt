@@ -1,0 +1,9 @@
+/Users/romans/Documents/GitHub/assistant/Assistant/Facade/bin/Debug/netcoreapp3.1/Facade.deps.json
+/Users/romans/Documents/GitHub/assistant/Assistant/Facade/bin/Debug/netcoreapp3.1/Facade.dll
+/Users/romans/Documents/GitHub/assistant/Assistant/Facade/bin/Debug/netcoreapp3.1/Facade.pdb
+/Users/romans/Documents/GitHub/assistant/Assistant/Facade/obj/Debug/netcoreapp3.1/Facade.csprojAssemblyReference.cache
+/Users/romans/Documents/GitHub/assistant/Assistant/Facade/obj/Debug/netcoreapp3.1/Facade.AssemblyInfoInputs.cache
+/Users/romans/Documents/GitHub/assistant/Assistant/Facade/obj/Debug/netcoreapp3.1/Facade.AssemblyInfo.cs
+/Users/romans/Documents/GitHub/assistant/Assistant/Facade/obj/Debug/netcoreapp3.1/Facade.csproj.CoreCompileInputs.cache
+/Users/romans/Documents/GitHub/assistant/Assistant/Facade/obj/Debug/netcoreapp3.1/Facade.dll
+/Users/romans/Documents/GitHub/assistant/Assistant/Facade/obj/Debug/netcoreapp3.1/Facade.pdb

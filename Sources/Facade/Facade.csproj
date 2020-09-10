@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <ReleaseVersion>0.1.0</ReleaseVersion>
+    <RootNamespace>Assistant.Facade</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Application\" />
+    <Folder Include="Commands\" />
+    <Folder Include="Messages\" />
+    <Folder Include="Configuration\" />
+  </ItemGroup>
+</Project>

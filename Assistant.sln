@@ -1,0 +1,64 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Assistant", "Assistant", "{5DC33E71-6BEB-41D2-BAB0-37B602F441D4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{81CED3C5-FF70-40ED-B726-793748F9B7E9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{9F1251C9-76DA-4D5D-BEFE-9A49F95D2FFE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{46046AF2-0B90-4FF1-AE36-2811E1725C8A}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "Sources\Application\Application.csproj", "{9881E611-2D86-43EE-9913-3967875494F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Facade", "Sources\Facade\Facade.csproj", "{101530D7-3AD9-4401-834B-0AE3BAE8916D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Messages", "Sources\Messages\Messages.csproj", "{AEB9ABDE-2F1A-4F8A-9833-9F524296EAA4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Configuration", "Sources\Configuration\Configuration.csproj", "{24A86572-974F-4348-8811-D61A76D260C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Commands", "Sources\Commands\Commands.csproj", "{2C6D0672-52C2-482D-8531-F65D4247B7C1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9881E611-2D86-43EE-9913-3967875494F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9881E611-2D86-43EE-9913-3967875494F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9881E611-2D86-43EE-9913-3967875494F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9881E611-2D86-43EE-9913-3967875494F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{101530D7-3AD9-4401-834B-0AE3BAE8916D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{101530D7-3AD9-4401-834B-0AE3BAE8916D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{101530D7-3AD9-4401-834B-0AE3BAE8916D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{101530D7-3AD9-4401-834B-0AE3BAE8916D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AEB9ABDE-2F1A-4F8A-9833-9F524296EAA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEB9ABDE-2F1A-4F8A-9833-9F524296EAA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEB9ABDE-2F1A-4F8A-9833-9F524296EAA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEB9ABDE-2F1A-4F8A-9833-9F524296EAA4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24A86572-974F-4348-8811-D61A76D260C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24A86572-974F-4348-8811-D61A76D260C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24A86572-974F-4348-8811-D61A76D260C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24A86572-974F-4348-8811-D61A76D260C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C6D0672-52C2-482D-8531-F65D4247B7C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C6D0672-52C2-482D-8531-F65D4247B7C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C6D0672-52C2-482D-8531-F65D4247B7C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C6D0672-52C2-482D-8531-F65D4247B7C1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{81CED3C5-FF70-40ED-B726-793748F9B7E9} = {5DC33E71-6BEB-41D2-BAB0-37B602F441D4}
+		{9F1251C9-76DA-4D5D-BEFE-9A49F95D2FFE} = {5DC33E71-6BEB-41D2-BAB0-37B602F441D4}
+		{9881E611-2D86-43EE-9913-3967875494F0} = {81CED3C5-FF70-40ED-B726-793748F9B7E9}
+		{101530D7-3AD9-4401-834B-0AE3BAE8916D} = {81CED3C5-FF70-40ED-B726-793748F9B7E9}
+		{AEB9ABDE-2F1A-4F8A-9833-9F524296EAA4} = {9F1251C9-76DA-4D5D-BEFE-9A49F95D2FFE}
+		{24A86572-974F-4348-8811-D61A76D260C4} = {9F1251C9-76DA-4D5D-BEFE-9A49F95D2FFE}
+		{2C6D0672-52C2-482D-8531-F65D4247B7C1} = {9F1251C9-76DA-4D5D-BEFE-9A49F95D2FFE}
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		version = 0.1.0
+	EndGlobalSection
+EndGlobal

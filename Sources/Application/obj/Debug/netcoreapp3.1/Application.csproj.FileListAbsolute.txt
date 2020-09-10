@@ -1,0 +1,9 @@
+/Users/romans/Documents/GitHub/assistant/Assistant/Application/bin/Debug/netcoreapp3.1/Application.deps.json
+/Users/romans/Documents/GitHub/assistant/Assistant/Application/bin/Debug/netcoreapp3.1/Application.dll
+/Users/romans/Documents/GitHub/assistant/Assistant/Application/bin/Debug/netcoreapp3.1/Application.pdb
+/Users/romans/Documents/GitHub/assistant/Assistant/Application/obj/Debug/netcoreapp3.1/Application.csprojAssemblyReference.cache
+/Users/romans/Documents/GitHub/assistant/Assistant/Application/obj/Debug/netcoreapp3.1/Application.AssemblyInfoInputs.cache
+/Users/romans/Documents/GitHub/assistant/Assistant/Application/obj/Debug/netcoreapp3.1/Application.AssemblyInfo.cs
+/Users/romans/Documents/GitHub/assistant/Assistant/Application/obj/Debug/netcoreapp3.1/Application.csproj.CoreCompileInputs.cache
+/Users/romans/Documents/GitHub/assistant/Assistant/Application/obj/Debug/netcoreapp3.1/Application.dll
+/Users/romans/Documents/GitHub/assistant/Assistant/Application/obj/Debug/netcoreapp3.1/Application.pdb

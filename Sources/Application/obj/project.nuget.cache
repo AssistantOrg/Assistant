@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "0AOpvOiqcOanKG+yxru2aCyvYlBlU2cj9EWnVSFE6AlvoW/lg8dAdWJdI/jFsZeQGOC3s8qadAQ6Mv/s8rgpfQ==",
+  "success": true,
+  "projectFilePath": "/Users/romans/Documents/GitHub/assistant/Assistant/Application/Application.csproj",
+  "expectedPackageFiles": [
+    "/Users/romans/.nuget/packages/newtonsoft.json/12.0.3/newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
