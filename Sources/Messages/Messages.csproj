@@ -1,26 +1,26 @@
-<Project Sdk="Microsoft.NET.Sdk">
+ <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <RootNamespace>Assistant.Messages</RootNamespace>
-    <ReleaseVersion>0.1.1</ReleaseVersion>
-    <PackageId>Assistant.Messages</PackageId>
-    <PackageVersion>0.1.1</PackageVersion>
-    <Authors>Roman Suslikov</Authors>
-    <DevelopmentDependency>true</DevelopmentDependency>
-    <PackageLicenseUrl>https://github.com/Assistants-org/Assistant/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageId>Rovecode.Assistant.Messages</PackageId>
+    <IsPackable>true</IsPackable>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <Owners>Roman Suslikov</Owners>
-    <PackageProjectUrl>https://github.com/Assistants-org/Assistant/blob/master</PackageProjectUrl>
-    <Title>Assistant.Messages</Title>
+    <Version>0.2.0</Version>
+    <Authors>Roman Suslikov</Authors>
+    <Copyright>Roman Suslikov</Copyright>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageProjectUrl>https://github.com/Assistants-org/Assistant</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Assistants-org/Assistant</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <OutputPath>..\Build\Debug</OutputPath>
+    <OutputPath>..\..\out\Debug</OutputPath>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <OutputPath>..\Build\Release</OutputPath>
+    <OutputPath>..\..\out\Release</OutputPath>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
   </PropertyGroup>
   <ItemGroup>
@@ -41,5 +41,11 @@
   <ItemGroup>
     <ProjectReference Include="..\Application\Application.csproj" />
     <ProjectReference Include="..\Facade\Facade.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 </Project>

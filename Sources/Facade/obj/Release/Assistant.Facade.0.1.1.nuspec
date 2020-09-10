@@ -6,7 +6,7 @@
     <title>Assistant.Facade</title>
     <authors>Roman Suslikov</authors>
     <developmentDependency>true</developmentDependency>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <licenseUrl>https://github.com/Assistants-org/Assistant/blob/master/LICENSE</licenseUrl>
     <projectUrl>https://github.com/Assistants-org/Assistant/blob/master</projectUrl>
     <description>Package Description</description>
@@ -15,6 +15,6 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="/Users/romans/Documents/GitHub/AssistantS/Sources/Build/Release/Facade.dll" target="lib/netcoreapp3.1/Facade.dll" />
+    <file src="C:\Users\roman\Documents\GitHub\Assistant\Sources\Build\Release\Facade.dll" target="lib\netcoreapp3.1\Facade.dll" />
   </files>
 </package>

@@ -1,0 +1,9 @@
+C:\Users\roman\Documents\GitHub\Assistant\Sources\Build\Debug\Facade.deps.json
+C:\Users\roman\Documents\GitHub\Assistant\Sources\Build\Debug\Facade.dll
+C:\Users\roman\Documents\GitHub\Assistant\Sources\Build\Debug\Facade.pdb
+C:\Users\roman\Documents\GitHub\Assistant\Sources\Facade\obj\Debug\Facade.csprojAssemblyReference.cache
+C:\Users\roman\Documents\GitHub\Assistant\Sources\Facade\obj\Debug\Facade.AssemblyInfoInputs.cache
+C:\Users\roman\Documents\GitHub\Assistant\Sources\Facade\obj\Debug\Facade.AssemblyInfo.cs
+C:\Users\roman\Documents\GitHub\Assistant\Sources\Facade\obj\Debug\Facade.csproj.CoreCompileInputs.cache
+C:\Users\roman\Documents\GitHub\Assistant\Sources\Facade\obj\Debug\Facade.dll
+C:\Users\roman\Documents\GitHub\Assistant\Sources\Facade\obj\Debug\Facade.pdb

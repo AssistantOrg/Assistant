@@ -8,3 +8,13 @@
 /Users/romans/Documents/GitHub/AssistantS/Sources/Configuration/obj/Release/Configuration.csproj.CopyComplete
 /Users/romans/Documents/GitHub/AssistantS/Sources/Configuration/obj/Release/Configuration.dll
 /Users/romans/Documents/GitHub/AssistantS/Sources/Configuration/obj/Release/Configuration.pdb
+C:\Users\roman\Documents\GitHub\Assistant\Sources\Build\Release\Configuration.deps.json
+C:\Users\roman\Documents\GitHub\Assistant\Sources\Build\Release\Configuration.dll
+C:\Users\roman\Documents\GitHub\Assistant\Sources\Build\Release\Configuration.pdb
+C:\Users\roman\Documents\GitHub\Assistant\Sources\Configuration\obj\Release\Configuration.csprojAssemblyReference.cache
+C:\Users\roman\Documents\GitHub\Assistant\Sources\Configuration\obj\Release\Configuration.AssemblyInfoInputs.cache
+C:\Users\roman\Documents\GitHub\Assistant\Sources\Configuration\obj\Release\Configuration.AssemblyInfo.cs
+C:\Users\roman\Documents\GitHub\Assistant\Sources\Configuration\obj\Release\Configuration.csproj.CoreCompileInputs.cache
+C:\Users\roman\Documents\GitHub\Assistant\Sources\Configuration\obj\Release\Configuration.csproj.CopyComplete
+C:\Users\roman\Documents\GitHub\Assistant\Sources\Configuration\obj\Release\Configuration.dll
+C:\Users\roman\Documents\GitHub\Assistant\Sources\Configuration\obj\Release\Configuration.pdb

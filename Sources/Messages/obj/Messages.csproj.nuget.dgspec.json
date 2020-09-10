@@ -1,30 +1,36 @@
 {
   "format": 1,
   "restore": {
-    "/Users/romans/Documents/GitHub/assistant/Assistant/Messages/Messages.csproj": {}
+    "C:\\Users\\roman\\Documents\\GitHub\\Assistant\\Sources\\Messages\\Messages.csproj": {}
   },
   "projects": {
-    "/Users/romans/Documents/GitHub/assistant/Assistant/Application/Application.csproj": {
-      "version": "1.0.0",
+    "C:\\Users\\roman\\Documents\\GitHub\\Assistant\\Sources\\Application\\Application.csproj": {
+      "version": "0.2.0",
       "restore": {
-        "projectUniqueName": "/Users/romans/Documents/GitHub/assistant/Assistant/Application/Application.csproj",
-        "projectName": "Application",
-        "projectPath": "/Users/romans/Documents/GitHub/assistant/Assistant/Application/Application.csproj",
-        "packagesPath": "/Users/romans/.nuget/packages/",
-        "outputPath": "/Users/romans/Documents/GitHub/assistant/Assistant/Application/obj/",
+        "projectUniqueName": "C:\\Users\\roman\\Documents\\GitHub\\Assistant\\Sources\\Application\\Application.csproj",
+        "projectName": "Rovecode.Assistant.Application",
+        "projectPath": "C:\\Users\\roman\\Documents\\GitHub\\Assistant\\Sources\\Application\\Application.csproj",
+        "packagesPath": "C:\\Users\\roman\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\roman\\Documents\\GitHub\\Assistant\\Sources\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/romans/.config/NuGet/NuGet.Config"
+          "C:\\Users\\roman\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\roman\\Documents\\GitHub\\Assistant\\Sources\\Facade\\Facade.csproj": {
+                "projectPath": "C:\\Users\\roman\\Documents\\GitHub\\Assistant\\Sources\\Facade\\Facade.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -56,26 +62,28 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.401/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/romans/Documents/GitHub/assistant/Assistant/Facade/Facade.csproj": {
-      "version": "1.0.0",
+    "C:\\Users\\roman\\Documents\\GitHub\\Assistant\\Sources\\Facade\\Facade.csproj": {
+      "version": "0.2.0",
       "restore": {
-        "projectUniqueName": "/Users/romans/Documents/GitHub/assistant/Assistant/Facade/Facade.csproj",
-        "projectName": "Facade",
-        "projectPath": "/Users/romans/Documents/GitHub/assistant/Assistant/Facade/Facade.csproj",
-        "packagesPath": "/Users/romans/.nuget/packages/",
-        "outputPath": "/Users/romans/Documents/GitHub/assistant/Assistant/Facade/obj/",
+        "projectUniqueName": "C:\\Users\\roman\\Documents\\GitHub\\Assistant\\Sources\\Facade\\Facade.csproj",
+        "projectName": "Rovecode.Assistant.Facade",
+        "projectPath": "C:\\Users\\roman\\Documents\\GitHub\\Assistant\\Sources\\Facade\\Facade.csproj",
+        "packagesPath": "C:\\Users\\roman\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\roman\\Documents\\GitHub\\Assistant\\Sources\\Facade\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/romans/.config/NuGet/NuGet.Config"
+          "C:\\Users\\roman\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -106,36 +114,38 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.401/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/romans/Documents/GitHub/assistant/Assistant/Messages/Messages.csproj": {
-      "version": "1.0.0",
+    "C:\\Users\\roman\\Documents\\GitHub\\Assistant\\Sources\\Messages\\Messages.csproj": {
+      "version": "0.2.0",
       "restore": {
-        "projectUniqueName": "/Users/romans/Documents/GitHub/assistant/Assistant/Messages/Messages.csproj",
-        "projectName": "Messages",
-        "projectPath": "/Users/romans/Documents/GitHub/assistant/Assistant/Messages/Messages.csproj",
-        "packagesPath": "/Users/romans/.nuget/packages/",
-        "outputPath": "/Users/romans/Documents/GitHub/assistant/Assistant/Messages/obj/",
+        "projectUniqueName": "C:\\Users\\roman\\Documents\\GitHub\\Assistant\\Sources\\Messages\\Messages.csproj",
+        "projectName": "Rovecode.Assistant.Messages",
+        "projectPath": "C:\\Users\\roman\\Documents\\GitHub\\Assistant\\Sources\\Messages\\Messages.csproj",
+        "packagesPath": "C:\\Users\\roman\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\roman\\Documents\\GitHub\\Assistant\\Sources\\Messages\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/romans/.config/NuGet/NuGet.Config"
+          "C:\\Users\\roman\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "/Users/romans/Documents/GitHub/assistant/Assistant/Application/Application.csproj": {
-                "projectPath": "/Users/romans/Documents/GitHub/assistant/Assistant/Application/Application.csproj"
+              "C:\\Users\\roman\\Documents\\GitHub\\Assistant\\Sources\\Application\\Application.csproj": {
+                "projectPath": "C:\\Users\\roman\\Documents\\GitHub\\Assistant\\Sources\\Application\\Application.csproj"
               },
-              "/Users/romans/Documents/GitHub/assistant/Assistant/Facade/Facade.csproj": {
-                "projectPath": "/Users/romans/Documents/GitHub/assistant/Assistant/Facade/Facade.csproj"
+              "C:\\Users\\roman\\Documents\\GitHub\\Assistant\\Sources\\Facade\\Facade.csproj": {
+                "projectPath": "C:\\Users\\roman\\Documents\\GitHub\\Assistant\\Sources\\Facade\\Facade.csproj"
               }
             }
           }
@@ -173,7 +183,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.401/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

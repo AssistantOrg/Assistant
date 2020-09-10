@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Z0TEMtfV8RsgUvum32HjShD5cG2QUHMu6d6zekBuTjmdmgWr9DZSiJxEnuQBVwhBFPwMw+NmPSJl9YHfBJVBAA==",
+  "dgSpecHash": "GgH6A7hiEXFy3c49unpUDlDSoYgyn4MPjL11QVdnpCrxCzMGRmuBVVYcOG7mT0IebjTgxqJZXrNNRRO47n6p/w==",
   "success": true,
-  "projectFilePath": "/Users/romans/Documents/GitHub/assistant/Assistant/Configuration/Configuration.csproj",
+  "projectFilePath": "C:\\Users\\roman\\Documents\\GitHub\\Assistant\\Sources\\Configuration\\Configuration.csproj",
   "expectedPackageFiles": [
-    "/Users/romans/.nuget/packages/newtonsoft.json/12.0.3/newtonsoft.json.12.0.3.nupkg.sha512"
+    "C:\\Users\\roman\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
   ],
   "logs": []
 }

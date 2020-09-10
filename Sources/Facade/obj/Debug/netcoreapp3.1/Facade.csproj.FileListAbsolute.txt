@@ -16,3 +16,12 @@
 /Users/romans/Documents/GitHub/AssistantS/Sources/Facade/obj/Debug/netcoreapp3.1/Facade.csproj.CoreCompileInputs.cache
 /Users/romans/Documents/GitHub/AssistantS/Sources/Facade/obj/Debug/netcoreapp3.1/Facade.dll
 /Users/romans/Documents/GitHub/AssistantS/Sources/Facade/obj/Debug/netcoreapp3.1/Facade.pdb
+C:\Users\roman\Documents\GitHub\Assistant\Sources\Facade\bin\Debug\netcoreapp3.1\Facade.deps.json
+C:\Users\roman\Documents\GitHub\Assistant\Sources\Facade\bin\Debug\netcoreapp3.1\Facade.dll
+C:\Users\roman\Documents\GitHub\Assistant\Sources\Facade\bin\Debug\netcoreapp3.1\Facade.pdb
+C:\Users\roman\Documents\GitHub\Assistant\Sources\Facade\obj\Debug\netcoreapp3.1\Facade.csprojAssemblyReference.cache
+C:\Users\roman\Documents\GitHub\Assistant\Sources\Facade\obj\Debug\netcoreapp3.1\Facade.AssemblyInfoInputs.cache
+C:\Users\roman\Documents\GitHub\Assistant\Sources\Facade\obj\Debug\netcoreapp3.1\Facade.AssemblyInfo.cs
+C:\Users\roman\Documents\GitHub\Assistant\Sources\Facade\obj\Debug\netcoreapp3.1\Facade.csproj.CoreCompileInputs.cache
+C:\Users\roman\Documents\GitHub\Assistant\Sources\Facade\obj\Debug\netcoreapp3.1\Facade.dll
+C:\Users\roman\Documents\GitHub\Assistant\Sources\Facade\obj\Debug\netcoreapp3.1\Facade.pdb

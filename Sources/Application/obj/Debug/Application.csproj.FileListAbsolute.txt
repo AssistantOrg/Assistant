@@ -1,0 +1,10 @@
+C:\Users\roman\Documents\GitHub\Assistant\Sources\Build\Debug\Application.deps.json
+C:\Users\roman\Documents\GitHub\Assistant\Sources\Build\Debug\Application.dll
+C:\Users\roman\Documents\GitHub\Assistant\Sources\Build\Debug\Application.pdb
+C:\Users\roman\Documents\GitHub\Assistant\Sources\Application\obj\Debug\Application.csprojAssemblyReference.cache
+C:\Users\roman\Documents\GitHub\Assistant\Sources\Application\obj\Debug\Application.AssemblyInfoInputs.cache
+C:\Users\roman\Documents\GitHub\Assistant\Sources\Application\obj\Debug\Application.AssemblyInfo.cs
+C:\Users\roman\Documents\GitHub\Assistant\Sources\Application\obj\Debug\Application.csproj.CoreCompileInputs.cache
+C:\Users\roman\Documents\GitHub\Assistant\Sources\Application\obj\Debug\Application.csproj.CopyComplete
+C:\Users\roman\Documents\GitHub\Assistant\Sources\Application\obj\Debug\Application.dll
+C:\Users\roman\Documents\GitHub\Assistant\Sources\Application\obj\Debug\Application.pdb

@@ -8,3 +8,13 @@
 /Users/romans/Documents/GitHub/AssistantS/Sources/Messages/obj/Release/Messages.csproj.CopyComplete
 /Users/romans/Documents/GitHub/AssistantS/Sources/Messages/obj/Release/Messages.dll
 /Users/romans/Documents/GitHub/AssistantS/Sources/Messages/obj/Release/Messages.pdb
+C:\Users\roman\Documents\GitHub\Assistant\Sources\Build\Release\Messages.deps.json
+C:\Users\roman\Documents\GitHub\Assistant\Sources\Build\Release\Messages.dll
+C:\Users\roman\Documents\GitHub\Assistant\Sources\Build\Release\Messages.pdb
+C:\Users\roman\Documents\GitHub\Assistant\Sources\Messages\obj\Release\Messages.csprojAssemblyReference.cache
+C:\Users\roman\Documents\GitHub\Assistant\Sources\Messages\obj\Release\Messages.AssemblyInfoInputs.cache
+C:\Users\roman\Documents\GitHub\Assistant\Sources\Messages\obj\Release\Messages.AssemblyInfo.cs
+C:\Users\roman\Documents\GitHub\Assistant\Sources\Messages\obj\Release\Messages.csproj.CoreCompileInputs.cache
+C:\Users\roman\Documents\GitHub\Assistant\Sources\Messages\obj\Release\Messages.csproj.CopyComplete
+C:\Users\roman\Documents\GitHub\Assistant\Sources\Messages\obj\Release\Messages.dll
+C:\Users\roman\Documents\GitHub\Assistant\Sources\Messages\obj\Release\Messages.pdb

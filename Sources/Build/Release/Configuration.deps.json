@@ -8,9 +8,9 @@
     ".NETCoreApp,Version=v3.1": {
       "Configuration/1.0.0": {
         "dependencies": {
-          "Application": "1.0.0",
-          "Commands": "1.0.0",
-          "Newtonsoft.Json": "12.0.3"
+          "Newtonsoft.Json": "12.0.3",
+          "Rovecode.Assistant.Application": "1.0.0",
+          "Rovecode.Assistant.Commands": "1.0.0"
         },
         "runtime": {
           "Configuration.dll": {}
@@ -24,25 +24,26 @@
           }
         }
       },
-      "Application/1.0.0": {
+      "Rovecode.Assistant.Application/1.0.0": {
         "dependencies": {
-          "Newtonsoft.Json": "12.0.3"
+          "Newtonsoft.Json": "12.0.3",
+          "Rovecode.Assistant.Facade": "1.0.0"
         },
         "runtime": {
           "Application.dll": {}
         }
       },
-      "Commands/1.0.0": {
+      "Rovecode.Assistant.Commands/1.0.0": {
         "dependencies": {
-          "Application": "1.0.0",
-          "Facade": "1.0.0",
-          "Newtonsoft.Json": "12.0.3"
+          "Newtonsoft.Json": "12.0.3",
+          "Rovecode.Assistant.Application": "1.0.0",
+          "Rovecode.Assistant.Facade": "1.0.0"
         },
         "runtime": {
           "Commands.dll": {}
         }
       },
-      "Facade/1.0.0": {
+      "Rovecode.Assistant.Facade/1.0.0": {
         "runtime": {
           "Facade.dll": {}
         }
@@ -62,17 +63,17 @@
       "path": "newtonsoft.json/12.0.3",
       "hashPath": "newtonsoft.json.12.0.3.nupkg.sha512"
     },
-    "Application/1.0.0": {
+    "Rovecode.Assistant.Application/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "Commands/1.0.0": {
+    "Rovecode.Assistant.Commands/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "Facade/1.0.0": {
+    "Rovecode.Assistant.Facade/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

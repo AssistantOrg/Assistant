@@ -12,14 +12,14 @@
     <description>Package Description</description>
     <dependencies>
       <group targetFramework=".NETCoreApp3.1">
-        <dependency id="Application" version="1.0.0" exclude="Build,Analyzers" />
-        <dependency id="Facade" version="1.0.0" exclude="Build,Analyzers" />
+        <dependency id="Assistant.Application" version="0.1.1" exclude="Build,Analyzers" />
+        <dependency id="Assistant.Facade" version="0.1.1" exclude="Build,Analyzers" />
         <dependency id="Microsoft.Azure.CognitiveServices.Search.CustomSearch" version="2.0.0" exclude="Build,Analyzers" />
         <dependency id="Newtonsoft.Json" version="12.0.3" exclude="Build,Analyzers" />
       </group>
     </dependencies>
   </metadata>
   <files>
-    <file src="/Users/romans/Documents/GitHub/AssistantS/Sources/Build/Release/Messages.dll" target="lib/netcoreapp3.1/Messages.dll" />
+    <file src="C:\Users\roman\Documents\GitHub\Assistant\Sources\Build\Release\Messages.dll" target="lib\netcoreapp3.1\Messages.dll" />
   </files>
 </package>
