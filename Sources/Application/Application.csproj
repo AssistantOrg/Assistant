@@ -5,7 +5,7 @@
     <PackageId>Rovecode.Assistant.Application</PackageId>
     <IsPackable>true</IsPackable>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <Version>0.2.1</Version>
+    <Version>0.2.2</Version>
     <Authors>Roman Suslikov</Authors>
     <Product>Application</Product>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
@@ -14,7 +14,7 @@
     <RepositoryType>git</RepositoryType>
     <Copyright>Roman Suslikov</Copyright>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <ReleaseVersion>0.2.1</ReleaseVersion>
+    <ReleaseVersion>0.2.2</ReleaseVersion>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">

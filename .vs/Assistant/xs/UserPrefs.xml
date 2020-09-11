@@ -1,7 +1,8 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workbench ActiveDocument="Sources/Commands/Managers/CommandsManager.cs">
     <Files>
-      <File FileName="Sources/Commands/Managers/CommandsManager.cs" Line="67" Column="63" />
+      <File FileName="Sources/Commands/Managers/CommandsManager.cs" Line="32" Column="14" />
+      <File FileName="Sources/Messages/Builders/Bing/BingLinkAttachmentBuilder.cs" Line="24" Column="10" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">

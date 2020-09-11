@@ -16,8 +16,6 @@ namespace Assistant.Commands.Managers
 
         public IAssistantMessage TryExecuteCommands(IAssistantContext context, IEnumerable<ICommandFindResult> commands)
         {
-            if (commands.Count() == 0) return null;
-
             var list = commands.ToList();
 
             // sort list by priority
@@ -33,7 +31,9 @@ namespace Assistant.Commands.Managers
                 }
             }
 
-            return DefaultCommand.Execute(context);
+            return DefaultCommand != null
+                ? DefaultCommand.Execute(context)
+                : null;
         }
 
         private bool KeySearchMatchesInCommand(IEnumerable<string> commandKey, IEnumerable<string> key)
@@ -79,9 +79,9 @@ namespace Assistant.Commands.Managers
             return TryExecuteCommands(context, FindCommands(context));
         }
 
-        public async Task<IAssistantMessage> TryFindAndExecuteCommandsAsync(IAssistantContext context)
+        public Task<IAssistantMessage> TryFindAndExecuteCommandsAsync(IAssistantContext context)
         {
-            return await TryExecuteCommandsAsync(context, await FindCommandsAsync(context));
+            return Task.Run(() => TryExecuteCommands(context, FindCommands(context)));
         }
     }
 }
