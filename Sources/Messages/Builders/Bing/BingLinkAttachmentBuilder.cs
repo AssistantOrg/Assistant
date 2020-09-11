@@ -1,20 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
+using Assistant.Application.Builders;
 using Assistant.Application.Exceptions;
 using Assistant.Facade.Application;
+using Assistant.Facade.Messages;
 using Assistant.Messages.Attachments;
 
 namespace Assistant.Messages.Builders.Bing
 {
-    public class BingLinkAttachmentBuilder : IBuilder<LinkAttachment>
+    public class BingLinkAttachmentBuilder : ContextBuilder<LinkAttachment>
     {
-        private readonly LinkAttachment _value;
-
-        public BingLinkAttachmentBuilder()
+        public BingLinkAttachmentBuilder(IAssistantContext context) : base(context)
         {
-            _value = new LinkAttachment();
-
-            _value.Source = Enums.WebSource.Bing;
+            _value = new LinkAttachment()
+            {
+                Source = Enums.WebSource.Google
+            };
         }
 
         public BingLinkAttachmentBuilder SetText(string text)
@@ -29,7 +30,7 @@ namespace Assistant.Messages.Builders.Bing
             return this;
         }
 
-        public LinkAttachment GetResult()
+        public override LinkAttachment GetResult()
         {
             if (_value.Text == string.Empty || _value.Text == null
                 || _value.Link == null)

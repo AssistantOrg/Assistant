@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Assistant.Commands.Models;
 using Assistant.Facade.Commands;
+using Assistant.Facade.Configuration;
 using Assistant.Facade.Messages;
 
 namespace Assistant.Commands.Managers
@@ -24,7 +25,9 @@ namespace Assistant.Commands.Managers
             //get current execute command
             foreach (CommandFindResult current in list)
             {
-                var result = current.Command.Execute(current.Context);
+                var ctx = context;
+                ctx.Message.ExcuteCommandKey = current.ExecuteCommandKey;
+                var result = current.Command.Execute(ctx);
                 if (result != null)
                 {
                     return result;
@@ -36,18 +39,10 @@ namespace Assistant.Commands.Managers
                 : null;
         }
 
-        private bool KeySearchMatchesInCommand(IEnumerable<string> commandKey, IEnumerable<string> key)
-        {
-            commandKey = commandKey.Distinct();
-            key = key.Distinct();
-
-            return commandKey.Count(e => key.Contains(e)) == key.Count();
-        }
-
         public IEnumerable<ICommandFindResult> FindCommands(IAssistantContext context)
         {
             List<CommandFindResult> findResult = Commands
-                .Select(e => new CommandFindResult { Command = e, Context = context })
+                .Select(e => new CommandFindResult { Command = e })
                     .ToList();
 
             IEnumerable<CommandFindResult> result =
@@ -56,7 +51,7 @@ namespace Assistant.Commands.Managers
                         bool isFind = KeySearchMatchesInCommand(context.Message.CommandKey, key);
                         if (isFind)
                         {
-                            e.Context.Message.ExcuteCommandKey = key;
+                            e.ExecuteCommandKey = key;
                         }
                         return isFind;
                     }));
@@ -82,6 +77,14 @@ namespace Assistant.Commands.Managers
         public Task<IAssistantMessage> TryFindAndExecuteCommandsAsync(IAssistantContext context)
         {
             return Task.Run(() => TryExecuteCommands(context, FindCommands(context)));
+        }
+
+        private static bool KeySearchMatchesInCommand(IEnumerable<string> commandKey, IEnumerable<string> key)
+        {
+            commandKey = commandKey.Distinct();
+            key = key.Distinct();
+
+            return commandKey.Count(e => key.Contains(e)) == key.Count();
         }
     }
 }

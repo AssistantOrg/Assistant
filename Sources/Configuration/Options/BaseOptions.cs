@@ -8,6 +8,6 @@ namespace Assistant.Configuration.Options
     {
         public string Language { get; set; }
 
-        public IEnumerable<string> ExecuteKey { get; set; }
+        public IEnumerable<IEnumerable<string>> ExecuteAssistantKeys { get; set; }
     }
 }

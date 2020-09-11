@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using Assistant.Messages.Enums;
+using Assistant.Messages.Models;
 
 namespace Assistant.Messages.Attachments
 {
-    public class ImagesAttachment : Attachment
+    public class ImagesAttachment : WebSourceAttachment
     {
-        public WebSource Source { get; set; }
-
-        public IEnumerable<Uri> Images { get; set; }
+        //[Required]
+        public IEnumerable<ImageModel> Images { get; set; }
     }
 }

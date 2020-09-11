@@ -1,14 +1,23 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Sources/Commands/Managers/CommandsManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="../../../../../usr/local/share/dotnet/sdk/3.1.402/Sdks/NuGet.Build.Tasks.Pack/build/NuGet.Build.Tasks.Pack.targets">
     <Files>
-      <File FileName="Sources/Commands/Managers/CommandsManager.cs" Line="32" Column="14" />
-      <File FileName="Sources/Messages/Builders/Bing/BingLinkAttachmentBuilder.cs" Line="24" Column="10" />
+      <File FileName="../../../../../usr/local/share/dotnet/sdk/3.1.402/Sdks/NuGet.Build.Tasks.Pack/build/NuGet.Build.Tasks.Pack.targets" Line="196" Column="59" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Assistant" expanded="True" selected="True">
-            <Node name="Assistant" expanded="True" />
+          <Node name="Assistant" expanded="True">
+            <Node name="Assistant" expanded="True">
+              <Node name="Core" expanded="True" />
+              <Node name="Infrastructure" expanded="True">
+                <Node name="Commands" expanded="True" selected="True">
+                  <Node name="Managers" expanded="True" />
+                  <Node name="Models" expanded="True" />
+                </Node>
+                <Node name="Messages" expanded="True" />
+              </Node>
+            </Node>
+            <Node name="Docs" expanded="True" />
           </Node>
         </State>
       </Pad>

@@ -5,7 +5,7 @@
     <PackageId>Rovecode.Assistant.Application</PackageId>
     <IsPackable>true</IsPackable>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <Version>0.2.2</Version>
+    <Version>0.2.4</Version>
     <Authors>Roman Suslikov</Authors>
     <Product>Application</Product>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
@@ -14,7 +14,8 @@
     <RepositoryType>git</RepositoryType>
     <Copyright>Roman Suslikov</Copyright>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <ReleaseVersion>0.2.2</ReleaseVersion>
+    <ReleaseVersion>0.2.4</ReleaseVersion>
+    <RootNamespace>Assistant.Application</RootNamespace>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -31,6 +32,7 @@
     <Folder Include="Types\" />
     <Folder Include="Globalization\" />
     <Folder Include="Helpers\" />
+    <Folder Include="Builders\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />

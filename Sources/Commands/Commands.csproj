@@ -12,8 +12,9 @@
     <PackageProjectUrl>https://github.com/Assistants-org/Assistant</PackageProjectUrl>
     <RepositoryUrl>https://github.com/Assistants-org/Assistant</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <Version>0.2.2/Version>
-    <ReleaseVersion>0.2.2</ReleaseVersion>
+    <Version>0.2.4</Version>
+    <ReleaseVersion>0.2.4</ReleaseVersion>
+    <RootNamespace>Assistant.Commands</RootNamespace>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -26,7 +27,6 @@
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\Application\Application.csproj" />
-    <ProjectReference Include="..\Facade\Facade.csproj" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />

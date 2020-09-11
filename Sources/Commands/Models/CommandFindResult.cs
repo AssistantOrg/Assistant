@@ -9,6 +9,6 @@ namespace Assistant.Commands.Models
     {
         public ICommand Command { get; set; }
 
-        public IAssistantContext Context { get; set; }
+        public IEnumerable<string> ExecuteCommandKey { get; set; }
     }
 }

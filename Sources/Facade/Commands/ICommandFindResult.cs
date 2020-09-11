@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Assistant.Facade.Messages;
 
 namespace Assistant.Facade.Commands
@@ -7,6 +8,6 @@ namespace Assistant.Facade.Commands
     {
         public ICommand Command { get; set; }
 
-        public IAssistantContext Context { get; set; }
+        public IEnumerable<string> ExecuteCommandKey { get; set; }
     }
 }

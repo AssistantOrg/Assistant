@@ -5,15 +5,17 @@
     <PackageId>Rovecode.Assistant.Messages</PackageId>
     <IsPackable>true</IsPackable>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <Version>0.2.2</Version>
+    <Version>0.2.4</Version>
     <Authors>Roman Suslikov</Authors>
     <Copyright>Roman Suslikov</Copyright>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageProjectUrl>https://github.com/Assistants-org/Assistant</PackageProjectUrl>
+    <Product>Messages</Product>
     <RepositoryUrl>https://github.com/Assistants-org/Assistant</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <ReleaseVersion>0.2.2</ReleaseVersion>
+    <ReleaseVersion>0.2.4</ReleaseVersion>
+    <RootNamespace>Assistant.Messages</RootNamespace>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -41,7 +43,6 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Application\Application.csproj" />
-    <ProjectReference Include="..\Facade\Facade.csproj" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\LICENSE">

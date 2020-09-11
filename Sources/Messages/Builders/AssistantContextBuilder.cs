@@ -1,42 +1,42 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Assistant.Application.Builders;
 using Assistant.Application.Exceptions;
 using Assistant.Application.Extensions;
 using Assistant.Facade.Application;
+using Assistant.Facade.Configuration;
 using Assistant.Messages.Contexts;
 
 namespace Assistant.Messages.Builders
 {
-    public class AssistantContextBuilder : IBuilder<AssistantContext>
+    public class AssistantContextBuilder : Builder<AssistantContext>
     {
-        private readonly string _text;
+        private string _text;
 
-        private IEnumerable<string> _executeAssistantKey = new string[] { };
-        private IEnumerable<string> _executeCommandKey = new string[] { };
-
-        public AssistantContextBuilder(string text)
+        public AssistantContextBuilder(IOptions options)
         {
-            _text = text;
+            _value = new AssistantContext()
+            {
+                Options = options
+            };
         }
 
-        public AssistantContextBuilder SetExecuteAssistantKey(IEnumerable<string> key)
+        public AssistantContextBuilder SetText(string text)
         {
-            _executeAssistantKey = key;
+            _text = text;
             return this;
         }
 
         public AssistantContextBuilder SetExecuteCommandKey(IEnumerable<string> key)
         {
-            _executeCommandKey = key;
+            _value.Message.ExcuteCommandKey = key;
             return this;
         }
 
-        public AssistantContext GetResult()
+        public override AssistantContext GetResult()
         {
             // create context
-            var ctx = new AssistantContext();
-
             if (string.IsNullOrEmpty(_text))
             {
                 throw new AssistantException("in assistant context builder text is null or empty");
@@ -44,11 +44,19 @@ namespace Assistant.Messages.Builders
 
             try
             {
-                ctx.Message.ExcuteAssistantKey = _executeAssistantKey;
-                ctx.Message.ExcuteCommandKey = _executeCommandKey;
-                ctx.Message.TextKey = _text.ToKey();
-                ctx.Message.CommandKey = ctx.Message.TextKey.ToArray()
-                    .Skip(ctx.Message.ExcuteAssistantKey.ToArray().Length);
+                _value.Message.TextKey = _text.ToKey();
+
+                _value.Message.ExcuteAssistantKey = _value.Options.ExecuteAssistantKeys
+                    .ToList().Find(delegate (IEnumerable<string> e) {
+                        if (_value.Message.TextKey.Count() < e.Count()) return false;
+
+                        return e.SequenceEqual(_value.Message.TextKey.Take(e.Count()));
+                    });
+
+                _value.Message.CommandKey = _value.Message.TextKey.ToArray()
+                    .Skip(_value.Message.ExcuteAssistantKey != null
+                        ? _value.Message.ExcuteAssistantKey.ToArray().Length
+                        : 0);
             }
             catch (AssistantException)
             {
@@ -60,7 +68,7 @@ namespace Assistant.Messages.Builders
             }
 
             // out context
-            return ctx;
+            return _value;
         }
     }
 }
