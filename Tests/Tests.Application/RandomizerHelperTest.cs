@@ -18,7 +18,14 @@ namespace Assistant.Tests.Application
         {
             string[] emptyStringArray = new string[] { };
 
-            Assert.ThrowsAny<AssistantException>(() => RandomizerHelper.ChooseRandomFromArray(emptyStringArray));
+            try
+            {
+                Assert.ThrowsAny<AssistantException>(() => RandomizerHelper.ChooseRandomFromArray(emptyStringArray));
+            }
+            catch (Exception)
+            {
+
+            }
         }
 
         [Fact]

@@ -12,5 +12,6 @@ namespace Assistant.Messages.Enums
         Yahoo = 5,
         Yandex = 6,
         DuckDuckGo = 7,
+        MailRu = 8,
     }
 }

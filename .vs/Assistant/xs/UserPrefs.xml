@@ -1,39 +1,40 @@
-﻿<Properties StartupConfiguration="{E38EEB58-D0EE-4FBF-B102-B67DF1D56EE5}|Модульные тесты">
+﻿<Properties StartupConfiguration="{0C2DFDCC-D406-41F3-BF4C-39FD7861074A}|Default">
   <MonoDevelop.Ide.ItemProperties.Tests.Assistant.Tests.Application PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.ItemProperties.Tests.Assistant.Tests.Messages PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assistant/Configuration/Options/BaseOptions.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assistant/Messages/Builders/Bing/BingImagesAttachmentBuilder.cs">
     <Files>
-      <File FileName="Assistant/Configuration/Options/BaseOptions.cs" Line="14" Column="25" />
+      <File FileName="Assistant/Messages/Builders/Bing/BingImagesAttachmentBuilder.cs" Line="14" Column="77" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Assistant" expanded="True">
             <Node name="Assistant" expanded="True">
-              <Node name="Core" expanded="True">
-                <Node name="Facade" expanded="True">
-                  <Node name="Configuration" expanded="True" />
-                </Node>
-              </Node>
+              <Node name="Core" expanded="True" />
               <Node name="Infrastructure" expanded="True">
                 <Node name="Configuration" expanded="True">
-                  <Node name="Options" expanded="True">
-                    <Node name="BaseOptions.cs" selected="True" />
+                  <Node name="Options" expanded="True" />
+                </Node>
+                <Node name="Messages" expanded="True">
+                  <Node name="Builders" expanded="True">
+                    <Node name="Bing" expanded="True" />
+                    <Node name="DuckDuckGo" selected="True" />
+                    <Node name="Google" expanded="True" />
+                    <Node name="Wikipedia" expanded="True" />
+                    <Node name="Yahoo" expanded="True" />
+                    <Node name="Yandex" expanded="True" />
                   </Node>
                 </Node>
               </Node>
             </Node>
             <Node name="Tests" expanded="True">
-              <Node name="Assistant" expanded="True">
-                <Node name="Tests.Application" expanded="True" />
-              </Node>
+              <Node name="Assistant" expanded="True" />
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.Tests.Assistant.Tests.Commands FirstBuild="True" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <DisabledProjects>
     <String>Sources/Application/Application.csproj</String>
@@ -42,7 +43,7 @@
     <String>Sources/Configuration/Configuration.csproj</String>
     <String>Sources/Commands/Commands.csproj</String>
   </DisabledProjects>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

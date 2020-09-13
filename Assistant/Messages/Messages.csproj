@@ -36,6 +36,10 @@
     <Folder Include="Messages\" />
     <Folder Include="Builders\Bing\" />
     <Folder Include="Builders\Google\" />
+    <Folder Include="Builders\DuckDuckGo\" />
+    <Folder Include="Builders\Yandex\" />
+    <Folder Include="Builders\Wikipedia\" />
+    <Folder Include="Builders\Yahoo\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
