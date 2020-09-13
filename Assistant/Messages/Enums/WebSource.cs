@@ -11,6 +11,6 @@ namespace Assistant.Messages.Enums
         Wikipedia = 4,
         Yahoo = 5,
         Yandex = 6,
-        PornHub = 7,
+        DuckDuckGo = 7,
     }
 }

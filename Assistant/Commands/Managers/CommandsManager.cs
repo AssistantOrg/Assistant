@@ -34,9 +34,7 @@ namespace Assistant.Commands.Managers
                 }
             }
 
-            return DefaultCommand != null
-                ? DefaultCommand.Execute(context)
-                : null;
+            return DefaultCommand?.Execute(context);
         }
 
         public IEnumerable<ICommandFindResult> FindCommands(IAssistantContext context)
