@@ -10,5 +10,7 @@ namespace Assistant.Facade.Configuration
         public IEnumerable<IEnumerable<string>> ExecuteAssistantKeys { get; set; }
 
         public string BingToken { get; set; }
+
+        public Uri BingLink { get; set; }
     }
 }

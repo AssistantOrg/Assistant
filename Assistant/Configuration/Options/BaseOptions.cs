@@ -11,5 +11,6 @@ namespace Assistant.Configuration.Options
         public IEnumerable<IEnumerable<string>> ExecuteAssistantKeys { get; set; }
 
         public string BingToken { get; set; }
+        public Uri BingLink { get; set; }
     }
 }
