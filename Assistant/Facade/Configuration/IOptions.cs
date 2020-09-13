@@ -8,5 +8,7 @@ namespace Assistant.Facade.Configuration
         public string Language { get; set; }
 
         public IEnumerable<IEnumerable<string>> ExecuteAssistantKeys { get; set; }
+
+        public string BingToken { get; set; }
     }
 }

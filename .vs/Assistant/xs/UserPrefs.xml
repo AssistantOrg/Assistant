@@ -1,8 +1,7 @@
-﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="../../../../../usr/local/share/dotnet/sdk/3.1.402/Sdks/NuGet.Build.Tasks.Pack/build/NuGet.Build.Tasks.Pack.targets">
-    <Files>
-      <File FileName="../../../../../usr/local/share/dotnet/sdk/3.1.402/Sdks/NuGet.Build.Tasks.Pack/build/NuGet.Build.Tasks.Pack.targets" Line="196" Column="59" />
-    </Files>
+﻿<Properties StartupConfiguration="{E38EEB58-D0EE-4FBF-B102-B67DF1D56EE5}|Модульные тесты">
+  <MonoDevelop.Ide.ItemProperties.Tests.Assistant.Tests.Application PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.ItemProperties.Tests.Assistant.Tests.Messages PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
@@ -10,20 +9,28 @@
             <Node name="Assistant" expanded="True">
               <Node name="Core" expanded="True" />
               <Node name="Infrastructure" expanded="True">
-                <Node name="Commands" expanded="True" selected="True">
-                  <Node name="Managers" expanded="True" />
-                  <Node name="Models" expanded="True" />
-                </Node>
                 <Node name="Messages" expanded="True" />
               </Node>
             </Node>
-            <Node name="Docs" expanded="True" />
+            <Node name="Tests" expanded="True">
+              <Node name="Assistant" expanded="True">
+                <Node name="Tests.Application" selected="True" />
+              </Node>
+            </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Tests.Assistant.Tests.Commands FirstBuild="True" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <DisabledProjects>
+    <String>Sources/Application/Application.csproj</String>
+    <String>Sources/Facade/Facade.csproj</String>
+    <String>Sources/Messages/Messages.csproj</String>
+    <String>Sources/Configuration/Configuration.csproj</String>
+    <String>Sources/Commands/Commands.csproj</String>
+  </DisabledProjects>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

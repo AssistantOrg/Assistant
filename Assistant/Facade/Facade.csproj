@@ -2,43 +2,35 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <PackageId>Rovecode.Assistant.Application</PackageId>
+    <PackageId>Rovecode.Assistant.Facade</PackageId>
     <IsPackable>true</IsPackable>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <Version>0.2.4</Version>
     <Authors>Roman Suslikov</Authors>
-    <Product>Application</Product>
+    <Copyright>Roman Suslikov</Copyright>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageProjectUrl>https://github.com/Assistants-org/Assistant</PackageProjectUrl>
+    <Product>Facade</Product>
     <RepositoryUrl>https://github.com/Assistants-org/Assistant</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <Copyright>Roman Suslikov</Copyright>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <ReleaseVersion>0.2.4</ReleaseVersion>
-    <RootNamespace>Assistant.Application</RootNamespace>
+    <RootNamespace>Assistant.Facade</RootNamespace>
   </PropertyGroup>
-
+  
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <OutputPath>..\..\out\Debug</OutputPath>
+    <OutputPath>..\..\Build\Assistant\Debug</OutputPath>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <OutputPath>..\..\out\Release</OutputPath>
+    <OutputPath>..\..\Build\Assistant\Release</OutputPath>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
   </PropertyGroup>
   <ItemGroup>
-    <Folder Include="Exceptions\" />
-    <Folder Include="Extensions\" />
-    <Folder Include="Types\" />
-    <Folder Include="Globalization\" />
-    <Folder Include="Helpers\" />
-    <Folder Include="Builders\" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Facade\Facade.csproj" />
+    <Folder Include="Application\" />
+    <Folder Include="Commands\" />
+    <Folder Include="Messages\" />
+    <Folder Include="Configuration\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\LICENSE">

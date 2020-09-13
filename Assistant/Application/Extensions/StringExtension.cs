@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text.RegularExpressions;
 using Assistant.Application.Exceptions;
 
@@ -9,9 +10,9 @@ namespace Assistant.Application.Extensions
     {
         public static IEnumerable<string> ToKey(this string text)
         {
-            if (text == string.Empty)
+            if (string.IsNullOrEmpty(text))
             {
-                throw new AssistantException("key string is empty");
+                return new string[] { };
             }
 
             // format text and 
@@ -20,10 +21,19 @@ namespace Assistant.Application.Extensions
             // remove not valid characters
             text = Regex.Replace(text, @"[^a-zа-я0-9 ]", "", RegexOptions.Multiline);
 
+            // add spaces near numbers
+            text = Regex.Replace(text, @"(?<=[a-zа-я])(?=[0-9])|(?<=[0-9])(?=[a-zа-я])", " ");
+
             // remove multy spaces
             text = Regex.Replace(text, @"\s+", " ", RegexOptions.Multiline);
 
-            return text.Split(" ");
+            // to key (array)
+            var key = text.Split(" ");
+
+            // remove blanks from array
+            key = key.Where(x => !string.IsNullOrEmpty(x)).ToArray();
+
+            return key;
         }
     }
 }

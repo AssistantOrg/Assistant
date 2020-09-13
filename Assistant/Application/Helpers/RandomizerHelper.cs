@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Assistant.Application.Exceptions;
 
 namespace Assistant.Application.Helpers
 {
@@ -8,6 +9,11 @@ namespace Assistant.Application.Helpers
     {
         public static T ChooseRandomFromArray<T>(IEnumerable<T> array)
         {
+            if (array == null || array.Count() == 0)
+            {
+                throw new AssistantException("array shoud be not null and contains value(s)");
+            }
+
             var arr = array.ToArray();
             return arr[new Random().Next(0, arr.Length)];
         }

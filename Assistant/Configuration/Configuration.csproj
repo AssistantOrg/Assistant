@@ -1,48 +1,40 @@
- <Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <PackageId>Rovecode.Assistant.Messages</PackageId>
+    <PackageId>Rovecode.Assistant.Configuration</PackageId>
     <IsPackable>true</IsPackable>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Version>0.2.4</Version>
     <Authors>Roman Suslikov</Authors>
+    <Product>Configuration</Product>
     <Copyright>Roman Suslikov</Copyright>
-    <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageProjectUrl>https://github.com/Assistants-org/Assistant</PackageProjectUrl>
-    <Product>Messages</Product>
     <RepositoryUrl>https://github.com/Assistants-org/Assistant</RepositoryUrl>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <RepositoryType>git</RepositoryType>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <ReleaseVersion>0.2.4</ReleaseVersion>
-    <RootNamespace>Assistant.Messages</RootNamespace>
+    <RootNamespace>Assistant.Configuration</RootNamespace>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <OutputPath>..\..\out\Debug</OutputPath>
+    <OutputPath>..\..\Build\Assistant\Debug</OutputPath>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <OutputPath>..\..\out\Release</OutputPath>
+    <OutputPath>..\..\Build\Assistant\Release</OutputPath>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
   </PropertyGroup>
   <ItemGroup>
-    <Folder Include="Builders\" />
-    <Folder Include="Enums\" />
-    <Folder Include="Factories\" />
-    <Folder Include="Contexts\" />
-    <Folder Include="Models\" />
-    <Folder Include="Attachments\" />
-    <Folder Include="Messages\" />
-    <Folder Include="Builders\Bing\" />
-    <Folder Include="Builders\Google\" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
-    <PackageReference Include="Microsoft.Azure.CognitiveServices.Search.CustomSearch" Version="2.0.0" />
+    <Folder Include="Options\" />
+    <Folder Include="Settings\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Application\Application.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\LICENSE">
