@@ -13,6 +13,6 @@ namespace Assistant.Messages.Contexts
 
         public IOptions Options { get; set; }
 
-        public bool IsExecutable => Message.ExcuteAssistantKey == null;
+        public bool IsExecutable => Message.ExcuteCommandKey.Count() > 0;
     }
 }

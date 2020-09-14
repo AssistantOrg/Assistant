@@ -9,6 +9,6 @@ namespace Assistant.Messages.Attachments
     public class ImagesAttachment : WebSourceAttachment
     {
         //[Required]
-        public IEnumerable<ImageModel> Images { get; set; }
+        public IEnumerable<ImageSearchInfo> Images { get; set; }
     }
 }

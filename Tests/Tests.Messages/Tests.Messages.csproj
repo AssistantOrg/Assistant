@@ -4,7 +4,7 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
 
     <IsPackable>false</IsPackable>
-    <ReleaseVersion>0.2.4</ReleaseVersion>
+    <ReleaseVersion>0.2.5</ReleaseVersion>
     <RootNamespace>Assistant.Tests.Messages</RootNamespace>
   </PropertyGroup>
 
@@ -24,4 +24,7 @@
     <PackageReference Include="coverlet.collector" Version="1.2.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\Assistant\Messages\Messages.csproj" />
+  </ItemGroup>
 </Project>

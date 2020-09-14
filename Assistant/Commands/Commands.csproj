@@ -12,8 +12,8 @@
     <PackageProjectUrl>https://github.com/Assistants-org/Assistant</PackageProjectUrl>
     <RepositoryUrl>https://github.com/Assistants-org/Assistant</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <Version>0.2.4</Version>
-    <ReleaseVersion>0.2.4</ReleaseVersion>
+    <Version>0.2.5</Version>
+    <ReleaseVersion>0.2.5</ReleaseVersion>
     <RootNamespace>Assistant.Commands</RootNamespace>
   </PropertyGroup>
 

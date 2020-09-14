@@ -1,9 +1,21 @@
 ﻿<Properties StartupConfiguration="{0C2DFDCC-D406-41F3-BF4C-39FD7861074A}|Default">
   <MonoDevelop.Ide.ItemProperties.Tests.Assistant.Tests.Application PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.ItemProperties.Tests.Assistant.Tests.Messages PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assistant/Messages/Builders/Bing/BingImagesAttachmentBuilder.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Tests/Tests.Messages/UnitTest1.cs">
     <Files>
-      <File FileName="Assistant/Messages/Builders/Bing/BingImagesAttachmentBuilder.cs" Line="14" Column="77" />
+      <File FileName="Assistant/Messages/Models/ImageSearchInfo.cs" Line="20" Column="1" />
+      <File FileName="Assistant/Messages/Enums/SafeSearch.cs" />
+      <File FileName="Assistant/Messages/Models/ImageInfo.cs" />
+      <File FileName="Assistant/Messages/Attachments/ImagesAttachment.cs" />
+      <File FileName="Assistant/Messages/Builders/AssistantContextBuilder.cs" />
+      <File FileName="Assistant/Messages/Builders/LinkAttachmentBuilder.cs" />
+      <File FileName="Assistant/Messages/Builders/Bing/SearchLinkAttachmentBuilder.cs" />
+      <File FileName="Tests/Tests.Messages/UnitTest1.cs" Line="11" Column="2" />
+      <File FileName="Assistant/Application/Extensions/StringExtension.cs" />
+      <File FileName="Assistant/Application/Extensions/UriExtensions.cs" />
+      <File FileName="Assistant/Messages/Contexts/AssistantContext.cs" />
+      <File FileName="Assistant/Messages/Enums/ImageType.cs" />
+      <File FileName="Assistant/Messages/Builders/Bing/SearchImagesAttachmentBuilder.cs" Line="171" Column="55" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -12,23 +24,21 @@
             <Node name="Assistant" expanded="True">
               <Node name="Core" expanded="True" />
               <Node name="Infrastructure" expanded="True">
-                <Node name="Configuration" expanded="True">
-                  <Node name="Options" expanded="True" />
-                </Node>
                 <Node name="Messages" expanded="True">
                   <Node name="Builders" expanded="True">
                     <Node name="Bing" expanded="True" />
-                    <Node name="DuckDuckGo" selected="True" />
-                    <Node name="Google" expanded="True" />
-                    <Node name="Wikipedia" expanded="True" />
-                    <Node name="Yahoo" expanded="True" />
-                    <Node name="Yandex" expanded="True" />
                   </Node>
+                  <Node name="Contexts" expanded="True" />
+                  <Node name="Enums" expanded="True" />
                 </Node>
               </Node>
             </Node>
             <Node name="Tests" expanded="True">
-              <Node name="Assistant" expanded="True" />
+              <Node name="Assistant" expanded="True">
+                <Node name="Tests.Messages" expanded="True">
+                  <Node name="UnitTest1.cs" selected="True" />
+                </Node>
+              </Node>
             </Node>
           </Node>
         </State>
@@ -43,7 +53,8 @@
     <String>Sources/Configuration/Configuration.csproj</String>
     <String>Sources/Commands/Commands.csproj</String>
   </DisabledProjects>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
+  <Debugger.DebugSourceFolders />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

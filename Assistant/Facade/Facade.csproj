@@ -5,7 +5,7 @@
     <PackageId>Rovecode.Assistant.Facade</PackageId>
     <IsPackable>true</IsPackable>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <Version>0.2.4</Version>
+    <Version>0.2.5</Version>
     <Authors>Roman Suslikov</Authors>
     <Copyright>Roman Suslikov</Copyright>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
@@ -14,7 +14,7 @@
     <RepositoryUrl>https://github.com/Assistants-org/Assistant</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <ReleaseVersion>0.2.4</ReleaseVersion>
+    <ReleaseVersion>0.2.5</ReleaseVersion>
     <RootNamespace>Assistant.Facade</RootNamespace>
   </PropertyGroup>
   
