@@ -15,7 +15,7 @@
     <RepositoryType>git</RepositoryType>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <ReleaseVersion>0.2.5</ReleaseVersion>
-    <RootNamespace>Assistant.Facade</RootNamespace>
+    <RootNamespace>Rovecode.Assistant.Facade</RootNamespace>
   </PropertyGroup>
   
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -28,14 +28,32 @@
   </PropertyGroup>
   <ItemGroup>
     <Folder Include="Application\" />
-    <Folder Include="Commands\" />
-    <Folder Include="Messages\" />
-    <Folder Include="Configuration\" />
+    <Folder Include="Application\Builders\" />
+    <Folder Include="Domain\" />
+    <Folder Include="Ferry\" />
+    <Folder Include="Persistence\" />
+    <Folder Include="Ferry\Commands\" />
+    <Folder Include="Ferry\Managers\" />
+    <Folder Include="Ferry\Contexts\" />
+    <Folder Include="Domain\Common\" />
+    <Folder Include="Persistence\Repositories\" />
+    <Folder Include="Tools\" />
+    <Folder Include="Domain\Attachments\" />
+    <Folder Include="Domain\Commands\" />
+    <Folder Include="Domain\Messages\" />
+    <Folder Include="Domain\Configurations\" />
+    <Folder Include="Enums\" />
+    <Folder Include="Domain\Models\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\LICENSE">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="MongoDB.Bson" Version="2.11.2" />
+    <PackageReference Include="MongoDB.Driver" Version="2.11.2" />
+    <PackageReference Include="MongoDB.Driver.Core" Version="2.11.2" />
   </ItemGroup>
 </Project>

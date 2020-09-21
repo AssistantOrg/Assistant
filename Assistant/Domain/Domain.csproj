@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <ReleaseVersion>0.2.5</ReleaseVersion>
+    <RootNamespace>Rovecode.Assistant.Domain</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Facade\Facade.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Common\" />
+    <Folder Include="Attachments\" />
+    <Folder Include="Commands\" />
+    <Folder Include="Configurations\" />
+    <Folder Include="Messages\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+</Project>

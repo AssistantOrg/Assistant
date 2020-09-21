@@ -1,9 +1,10 @@
 ﻿using System;
-using Assistant.Facade.Messages;
+using Rovecode.Assistant.Facade.Application.Builders;
+using Rovecode.Assistant.Facade.Ferry.Contexts;
 
 namespace Assistant.Application.Builders
 {
-    public abstract class ContextBuilder<T> : Builder<T>
+    public abstract class ContextBuilder<T> : Builder<T>, IContextBuilder<T>
     {
         protected IAssistantContext _context;
 

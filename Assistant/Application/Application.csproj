@@ -15,7 +15,7 @@
     <Copyright>Roman Suslikov</Copyright>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <ReleaseVersion>0.2.5</ReleaseVersion>
-    <RootNamespace>Assistant.Application</RootNamespace>
+    <RootNamespace>Rovecode.Assistant.Application</RootNamespace>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -36,7 +36,7 @@
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Facade\Facade.csproj" />
+    <ProjectReference Include="..\Domain\Domain.csproj" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\LICENSE">

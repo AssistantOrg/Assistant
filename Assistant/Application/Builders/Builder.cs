@@ -1,5 +1,5 @@
 ﻿using System;
-using Assistant.Facade.Application;
+using Rovecode.Assistant.Facade.Application.Builders;
 
 namespace Assistant.Application.Builders
 {
@@ -7,6 +7,6 @@ namespace Assistant.Application.Builders
     {
         protected T _value;
 
-        public abstract T GetResult();
+        public abstract T Result();
     }
 }

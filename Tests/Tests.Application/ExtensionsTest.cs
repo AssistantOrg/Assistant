@@ -15,7 +15,7 @@ namespace Assistant.Tests.Application
         public void Test_ToKeyExtension_In_CrazyString_Out_KeyArray()
         {
             const string crazyStr = "HELLO     hEllO  Привет ПривЕт !№%№%:.(;%Hi  !№%№%:.(;Ку  43423 000_T_T_000 000_Я_Я_000";
-
+            
             Assert.Equal(crazyStr.ToKey(), new [] { "hello", "hello", "привет", "привет", "hi", "ку", "43423", "000", "tt", "000", "000", "яя", "000" });
         }
 
