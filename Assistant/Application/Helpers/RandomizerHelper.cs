@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Assistant.Application.Exceptions;
+using Rovecode.Assistant.Application.Exceptions;
 
-namespace Assistant.Application.Helpers
+namespace Rovecode.Assistant.Application.Helpers
 {
     public static class RandomizerHelper
     {

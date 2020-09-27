@@ -5,9 +5,9 @@ namespace Rovecode.Assistant.Tools.Factories
 {
     public class YahooFactory
     {
-        private IAssistantContext _context;
+        private ICommandContext _context;
 
-        public YahooFactory(IAssistantContext context)
+        public YahooFactory(ICommandContext context)
         {
             _context = context;
         }

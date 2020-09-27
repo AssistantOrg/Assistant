@@ -8,7 +8,7 @@ namespace Rovecode.Assistant.Tools.Builders.Wikipedia
 {
     public class SearchLinkAttachmentBuilder : LinkAttachmentBuilder<SearchLinkAttachmentBuilder>
     {
-        public SearchLinkAttachmentBuilder(IAssistantContext context)
+        public SearchLinkAttachmentBuilder(ICommandContext context)
             : base(context)
         {
             _value = new LinkAttachment()
@@ -29,7 +29,7 @@ namespace Rovecode.Assistant.Tools.Builders.Wikipedia
             return this;
         }
 
-        public override ILinkAttachment Result()
+        public override ILinkAttachment Build()
         {
             ThrowIfNotValid();
 

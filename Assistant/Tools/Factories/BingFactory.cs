@@ -5,9 +5,9 @@ namespace Rovecode.Assistant.Tools.Factories
 {
     public class BingFactory
     {
-        private IAssistantContext _context;
+        private ICommandContext _context;
 
-        public BingFactory(IAssistantContext context)
+        public BingFactory(ICommandContext context)
         {
             _context = context;
         }

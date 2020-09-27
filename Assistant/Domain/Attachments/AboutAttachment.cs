@@ -1,5 +1,6 @@
 ﻿using System;
 using Rovecode.Assistant.Facade.Domain.Attachments;
+using Rovecode.Assistant.Facade.Domain.Models;
 
 namespace Rovecode.Assistant.Domain.Attachments
 {

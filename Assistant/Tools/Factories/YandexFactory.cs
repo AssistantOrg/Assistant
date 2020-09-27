@@ -5,9 +5,9 @@ namespace Rovecode.Assistant.Tools.Factories
 {
     public class YandexFactory
     {
-        private IAssistantContext _context;
+        private ICommandContext _context;
 
-        public YandexFactory(IAssistantContext context)
+        public YandexFactory(ICommandContext context)
         {
             _context = context;
         }

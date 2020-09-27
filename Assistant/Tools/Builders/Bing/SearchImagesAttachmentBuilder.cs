@@ -4,11 +4,11 @@ using System.Drawing;
 using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
-using Assistant.Application.Builders;
-using Assistant.Application.Exceptions;
-using Assistant.Application.Extensions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using Rovecode.Assistant.Application.Builders;
+using Rovecode.Assistant.Application.Exceptions;
+using Rovecode.Assistant.Application.Extensions;
 using Rovecode.Assistant.Domain.Attachments;
 using Rovecode.Assistant.Facade.Domain.Attachments;
 using Rovecode.Assistant.Facade.Domain.Models;
@@ -35,7 +35,7 @@ namespace Rovecode.Assistant.Tools.Builders.Bing
         private ImageLicense _imageLicense = ImageLicense.All;
         private ImageType _imageType = ImageType.Photo;
 
-        public SearchImagesAttachmentBuilder(IAssistantContext context)
+        public SearchImagesAttachmentBuilder(ICommandContext context)
             : base(context)
         {
             if (context.Configuration.Info.Bing == null)
@@ -235,7 +235,7 @@ namespace Rovecode.Assistant.Tools.Builders.Bing
             }
         }
 
-        public override IImagesAttachment Result()
+        public override IImagesAttachment Build()
         {
             var result = BuildAndSendHttpResuest();
             result.Wait(TimeSpan.FromSeconds(3));

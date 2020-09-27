@@ -5,9 +5,9 @@ namespace Rovecode.Assistant.Tools.Factories
 {
     public class DuckDuckGoFactory
     {
-        private IAssistantContext _context;
+        private ICommandContext _context;
 
-        public DuckDuckGoFactory(IAssistantContext context)
+        public DuckDuckGoFactory(ICommandContext context)
         {
             _context = context;
         }

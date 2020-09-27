@@ -9,8 +9,11 @@
   <ItemGroup>
     <Folder Include="Repositories\" />
     <Folder Include="Services\" />
+    <Folder Include="Services\Storages\" />
+    <Folder Include="Services\Users\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Application\Application.csproj" />
+    <ProjectReference Include="..\Ferry\Ferry.csproj" />
   </ItemGroup>
 </Project>

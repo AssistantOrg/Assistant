@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Linq;
-using Assistant.Application.Exceptions;
-using Assistant.Application.Helpers;
+using Rovecode.Assistant.Application.Helpers;
 using Xunit;
 
 namespace Assistant.Tests.Application

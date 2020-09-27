@@ -8,7 +8,7 @@ namespace Rovecode.Assistant.Tools.Builders.Google
 {
     public class SearchLinkAttachmentBuilder : LinkAttachmentBuilder<SearchLinkAttachmentBuilder>
     {
-        public SearchLinkAttachmentBuilder(IAssistantContext context) : base(context)
+        public SearchLinkAttachmentBuilder(ICommandContext context) : base(context)
         {
             _value = new LinkAttachment()
             {
@@ -28,7 +28,7 @@ namespace Rovecode.Assistant.Tools.Builders.Google
             return this;
         }
 
-        public override ILinkAttachment Result()
+        public override ILinkAttachment Build()
         {
             ThrowIfNotValid();
 

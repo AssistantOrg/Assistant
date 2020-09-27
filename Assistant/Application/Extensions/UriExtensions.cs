@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Web;
 
-namespace Assistant.Application.Extensions
+namespace Rovecode.Assistant.Application.Extensions
 {
     public static class UriExtensions
     {

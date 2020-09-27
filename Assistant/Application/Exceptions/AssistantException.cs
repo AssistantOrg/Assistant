@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Assistant.Application.Exceptions
+namespace Rovecode.Assistant.Application.Exceptions
 {
     public class AssistantException : Exception
     {

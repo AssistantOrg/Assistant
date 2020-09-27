@@ -5,9 +5,9 @@ namespace Rovecode.Assistant.Tools.Factories
 {
     public class GoogleFactory
     {
-        private IAssistantContext _context;
+        private ICommandContext _context;
 
-        public GoogleFactory(IAssistantContext context)
+        public GoogleFactory(ICommandContext context)
         {
             _context = context;
         }

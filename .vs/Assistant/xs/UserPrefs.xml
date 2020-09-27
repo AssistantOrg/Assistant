@@ -1,37 +1,33 @@
-﻿<Properties StartupConfiguration="{0C2DFDCC-D406-41F3-BF4C-39FD7861074A}|Default">
-  <MonoDevelop.Ide.ItemProperties.Assistant.2.Infrastructure.Ferry FirstBuild="True" />
-  <MonoDevelop.Ide.ItemProperties.Assistant.1.Core.Domain FirstBuild="True" />
+﻿<Properties StartupConfiguration="{2ACF6852-5BF3-4886-9F56-2F0EA3174FCF}|Модульные тесты">
+  <MonoDevelop.Ide.ItemProperties.Tests.Assistant.Tests.Common PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.ItemProperties.Tests.Assistant.Tests.Application PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.ItemProperties.Tests.Assistant.Tests.Messages PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.ItemProperties.Assistant.2.Infrastructure.Persistence FirstBuild="True" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assistant/Tools/Factories/YandexFactory.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assistant/Tools/Builders/CommandContextBuilder.cs">
     <Files>
-      <File FileName="Assistant/Tools/Builders/Bing/SearchImagesAttachmentBuilder.cs" Line="38" Column="63" />
-      <File FileName="Assistant/Tools/Factories/BingFactory.cs" Line="8" Column="9" />
-      <File FileName="Assistant/Tools/Builders/Bing/SearchLinkAttachmentBuilder.cs" Line="1" Column="1" />
-      <File FileName="Assistant/Tools/Factories/DuckDuckGoFactory.cs" Line="8" Column="9" />
-      <File FileName="Assistant/Tools/Factories/GoogleFactory.cs" Line="8" Column="9" />
-      <File FileName="Assistant/Tools/Factories/WikipediaFactory.cs" Line="8" Column="9" />
-      <File FileName="Assistant/Tools/Factories/YahooFactory.cs" Line="8" Column="9" />
-      <File FileName="Assistant/Tools/Builders/Yahoo/SearchLinkAttachmentBuilder.cs" Line="14" Column="42" />
-      <File FileName="Assistant/Tools/Factories/YandexFactory.cs" Line="4" Column="18" />
+      <File FileName="Assistant/Tools/Builders/CommandContextBuilder.cs" Line="64" Column="1" />
+      <File FileName="Assistant/Tools/Builders/ApplicationContextBuilder.cs" Line="42" Column="53" />
+      <File FileName="Assistant/Tools/Builders/_CommandContextBuilder.cs" Line="59" Column="39" />
+      <File FileName="Assistant/Tools/Builders/LinkAttachmentBuilder.cs" Line="14" Column="10" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Assistant" expanded="True">
             <Node name="Assistant" expanded="True">
-              <Node name="1.Core" expanded="True" />
-              <Node name="2.Infrastructure" expanded="True" />
+              <Node name="1.Core" expanded="True">
+                <Node name="Application" expanded="True" />
+                <Node name="Facade" expanded="True" />
+              </Node>
               <Node name="3.Auxiliary" expanded="True">
                 <Node name="Tools" expanded="True">
                   <Node name="Builders" expanded="True">
-                    <Node name="Yahoo" expanded="True" />
-                  </Node>
-                  <Node name="Factories" expanded="True">
-                    <Node name="YandexFactory.cs" selected="True" />
+                    <Node name="CommandContextBuilder.cs" selected="True" />
                   </Node>
                 </Node>
+              </Node>
+            </Node>
+            <Node name="Tests" expanded="True">
+              <Node name="Assistant" expanded="True">
+                <Node name="Tests.Common" expanded="True" />
               </Node>
             </Node>
           </Node>
@@ -49,7 +45,6 @@
   </DisabledProjects>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <Debugger.DebugSourceFolders />
-  <MonoDevelop.Ide.ItemProperties.Assistant.3.Auxiliary.Tools FirstBuild="True" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

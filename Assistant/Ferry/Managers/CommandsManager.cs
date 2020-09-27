@@ -16,29 +16,38 @@ namespace Rovecode.Assistant.Ferry.Managers
         public List<ICommand> Commands { get; } = new List<ICommand>();
         public ICommand DefaultCommand { get; set; }
 
-        public IAssistantMessage TryExecuteCommands(IAssistantContext context, IEnumerable<ICommandFindResult> commands)
+        public Task<IDispatchMessage> RunAsync(ICommandContext context)
+        {
+            return TryExecuteCommandsAsync(context, FindCommands(context));
+        }
+
+        private async Task<IDispatchMessage> TryExecuteCommandsAsync(ICommandContext context, IEnumerable<ICommandFindResult> commands)
         {
             var list = commands.ToList();
 
             // sort list by priority
             list.Sort((a, b) => b.Command.Info.Priority - a.Command.Info.Priority);
 
+            IDispatchMessage message = null;
+
             //get current execute command
             foreach (CommandFindResult current in list)
             {
                 var ctx = context;
                 ctx.Message.ExcuteCommandKey = current.ExecuteCommandKey;
-                var result = current.Command.Execute(ctx);
-                if (result != null)
+                message = await Task.FromResult(current.Command.Execute(ctx));
+                if (message != null)
                 {
-                    return result;
+                    return message;
                 }
             }
 
-            return DefaultCommand?.Execute(context);
+            message = await Task.FromResult(DefaultCommand?.Execute(context));
+
+            return message;
         }
 
-        public IEnumerable<ICommandFindResult> FindCommands(IAssistantContext context)
+        private IEnumerable<ICommandFindResult> FindCommands(ICommandContext context)
         {
             List<CommandFindResult> findResult = Commands
                 .Select(e => new CommandFindResult { Command = e })
@@ -56,26 +65,6 @@ namespace Rovecode.Assistant.Ferry.Managers
                     }));
 
             return result;
-        }
-
-        public Task<IAssistantMessage> TryExecuteCommandsAsync(IAssistantContext context, IEnumerable<ICommandFindResult> commands)
-        {
-            return Task.Run(() => TryExecuteCommands(context, commands));
-        }
-
-        public Task<IEnumerable<ICommandFindResult>> FindCommandsAsync(IAssistantContext context)
-        {
-            return Task.Run(() => FindCommands(context));
-        }
-
-        public IAssistantMessage TryFindAndExecuteCommands(IAssistantContext context)
-        {
-            return TryExecuteCommands(context, FindCommands(context));
-        }
-
-        public Task<IAssistantMessage> TryFindAndExecuteCommandsAsync(IAssistantContext context)
-        {
-            return Task.Run(() => TryExecuteCommands(context, FindCommands(context)));
         }
 
         private static bool KeySearchMatchesInCommand(IEnumerable<string> commandKey, IEnumerable<string> key)

@@ -5,9 +5,9 @@ namespace Rovecode.Assistant.Tools.Factories
 {
     public class WikipediaFactory
     {
-        private IAssistantContext _context;
+        private ICommandContext _context;
 
-        public WikipediaFactory(IAssistantContext context)
+        public WikipediaFactory(ICommandContext context)
         {
             _context = context;
         }
