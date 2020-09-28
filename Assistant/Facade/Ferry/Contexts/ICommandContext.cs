@@ -1,7 +1,6 @@
 ﻿using MongoDB.Driver;
 using Rovecode.Assistant.Facade.Domain.Messages;
 using Rovecode.Assistant.Facade.Domain.Models;
-using Rovecode.Assistant.Facade.Ferry.Managers;
 
 namespace Rovecode.Assistant.Facade.Ferry.Contexts
 {
@@ -11,7 +10,7 @@ namespace Rovecode.Assistant.Facade.Ferry.Contexts
 
         public IUser User { get; set; }
 
-        public IApplicationContext Configuration { get; set; }
+        public IApplicationContext AppContext { get; set; }
 
         //public bool IsExecutable { get; }
     }

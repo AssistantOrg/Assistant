@@ -4,8 +4,10 @@ using System.Linq;
 using Rovecode.Assistant.Application.Builders;
 using Rovecode.Assistant.Application.Exceptions;
 using Rovecode.Assistant.Application.Helpers;
+using Rovecode.Assistant.Domain.Users;
 using Rovecode.Assistant.Facade.Ferry.Contexts;
 using Rovecode.Assistant.Ferry.Contexts;
+using Rovecode.Assistant.Persistence.Services.Users;
 
 namespace Rovecode.Assistant.Tools.Builders
 {
@@ -13,13 +15,13 @@ namespace Rovecode.Assistant.Tools.Builders
     {
         public string Text { get; set; }
 
-        public string Identifier { get; set; }
+        public UserToken IdentifyToken { get; set; }
 
-        public IApplicationContext AppContext { get; set; }
+        private readonly IApplicationContext _appContext;
 
-        public CommandContextBuilder()
+        public CommandContextBuilder(IApplicationContext appContext)
         {
-
+            _appContext = appContext;
         }
 
         public override ICommandContext Build()
@@ -28,7 +30,7 @@ namespace Rovecode.Assistant.Tools.Builders
 
             try
             {
-                context.Configuration = AppContext;
+                context.AppContext = _appContext;
 
                 SetMessage(ref context);
                 SetUser(ref context);
@@ -54,7 +56,9 @@ namespace Rovecode.Assistant.Tools.Builders
 
         private void SetUser(ref CommandContext ctx)
         {
+            var indentityService = new UserIdentify(ctx.AppContext);
 
+            ctx.User = indentityService.IdentifyAsync(IdentifyToken).Result;
         }
 
         private void SetTextKey(ref CommandContext ctx)
@@ -65,7 +69,7 @@ namespace Rovecode.Assistant.Tools.Builders
         private void SetExecuteKey(ref CommandContext ctx)
         {
             var textKey = ctx.Message.TextKey;
-            ctx.Message.ExcuteAssistantKey = ctx.Configuration.Info.Application.ExecuteAssistantKeys
+            ctx.Message.ExcuteAssistantKey = ctx.AppContext.Info.Application.ExecuteAssistantKeys
                 .ToList().Find(delegate (IEnumerable<string> e)
                 {
                     if (textKey.Count() < e.Count())

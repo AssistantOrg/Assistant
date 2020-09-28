@@ -6,9 +6,9 @@ using Rovecode.Assistant.Facade.Domain.Messages;
 using Rovecode.Assistant.Facade.Ferry.Commands;
 using Rovecode.Assistant.Facade.Ferry.Contexts;
 
-namespace Rovecode.Assistant.Facade.Ferry.Managers
+namespace Rovecode.Assistant.Facade.Ferry.Invokers
 {
-    public interface ICommandsManager
+    public interface ICommandInvoker
     {
         public List<ICommand> Commands { get; }
         public ICommand DefaultCommand { get; set; }

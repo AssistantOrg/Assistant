@@ -34,29 +34,42 @@ namespace Rovecode.Assistant.Persistence.Services.Users
             return Builders<User>.Filter.Eq("_id", id);
         }
 
-        private FilterDefinition<User> BuildSecretFilter(User user)
+        private FilterDefinition<User> BuildLoginFilter(User user)
         {
-            return BuildSecretFilter(user.Secret);
+            return BuildLoginFilter(user.Login);
         }
 
-        private FilterDefinition<User> BuildSecretFilter(string secret)
+        private FilterDefinition<User> BuildLoginFilter(string secret)
         {
-            return Builders<User>.Filter.Eq("Secret", secret);
+            return Builders<User>.Filter.Eq("Login", secret);
         }
 
-        private bool IsExistsById(User user)
+        private FilterDefinition<User> BuildPasswordFilter(User user)
+        {
+            return BuildPasswordFilter(user.Login);
+        }
+
+        private FilterDefinition<User> BuildPasswordFilter(string secret)
+        {
+            return Builders<User>.Filter.Eq("Password", secret);
+        }
+
+        public bool IsExistsById(User user)
         {
             return _userRepository.IsExists(BuildIdFilter(user));
         }
 
-        public bool IsExistsBySecret(string secret)
+        public bool IsExistsByLogin(string secret)
         {
-            return _userRepository.IsExists(BuildSecretFilter(secret));
+            return _userRepository.IsExists(BuildLoginFilter(secret));
         }
 
         public async Task CreateAsync(User user)
         {
-            if (IsExistsBySecret(user.Secret)) throw new AssistantException();
+            if (IsExistsByLogin(user.Login))
+            {
+                throw new AssistantException();
+            }
 
             await _userRepository.InsertOneAsync(user);
         }
@@ -68,19 +81,20 @@ namespace Rovecode.Assistant.Persistence.Services.Users
 
         public Task<UserToken> AuthAsync(User user)
         {
-            return AuthAsync(user.Secret);
+            return AuthAsync(user.Login, user.Password);
         }
 
-        public async Task<UserToken> AuthAsync(string secret)
+        public async Task<UserToken> AuthAsync(string login, string passwordSha512)
         {
-            if (string.IsNullOrEmpty(secret))
+            if (string.IsNullOrEmpty(login) || string.IsNullOrEmpty(passwordSha512))
             {
                 throw new AssistantException();
             }
 
-            if (IsExistsBySecret(secret))
+            if (IsExistsByLogin(login))
             {
-                var userBySecret = await _userRepository.FindOneAsync(BuildSecretFilter(secret));
+                var userBySecret = await _userRepository.FindOneAsync(Builders<User>.Filter
+                    .And(BuildLoginFilter(login), BuildPasswordFilter(passwordSha512)));
 
                 var token = new UserToken
                 {

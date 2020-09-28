@@ -21,93 +21,27 @@ namespace Rovecode.Assistant.Tools.Builders.Bing
     {
         private IEnumerable<string> _searchKey;
 
-        private int _count = 5;
-        private int _offset = 0;
+        public int Count { get; set; } = 5;
+        public int Offset { get; set; } = 0;
 
-        private int _maxImageFileSize = int.MaxValue;
-        private int _minImageFileSize = 0;
+        public int MaxImageFileSize { get; set; } = int.MaxValue;
+        public int MinImageFileSize { get; set; } = 0;
 
-        private Size _minImageExtensionSize = new Size(0, 0);
-        private Size _maxImageExtensionSize = new Size(int.MaxValue, int.MaxValue);
+        public Size MinImageExtensionSize { get; set; } = new Size(0, 0);
+        public Size MaxImageExtensionSize { get; set; } = new Size(int.MaxValue, int.MaxValue);
 
-        private SafeSearch _safeSearch = SafeSearch.Selective;
+        public SafeSearch SafeSearch { get; set; } = SafeSearch.Selective;
 
-        private ImageLicense _imageLicense = ImageLicense.All;
-        private ImageType _imageType = ImageType.Photo;
+        public ImageLicense ImageLicense { get; set; } = ImageLicense.All;
+        public ImageType ImageType { get; set; } = ImageType.Photo;
 
         public SearchImagesAttachmentBuilder(ICommandContext context)
             : base(context)
         {
-            if (context.Configuration.Info.Bing == null)
+            if (context.AppContext.Info.Bing == null)
             {
                 throw new AssistantException("bing data is null or empty");
             }
-
-            _value = new ImagesAttachment()
-            {
-                Source = Facade.Enums.WebSource.Bing
-            };
-        }
-
-        public SearchImagesAttachmentBuilder SetSearchKey(IEnumerable<string> searchKey)
-        {
-            _searchKey = searchKey;
-            return this;
-        }
-
-        public SearchImagesAttachmentBuilder SetOffset(int offset)
-        {
-            _offset = offset;
-            return this;
-        }
-
-        public SearchImagesAttachmentBuilder SetCount(int count)
-        {
-            _count = count;
-            return this;
-        }
-
-        public SearchImagesAttachmentBuilder SetSafeSearch(SafeSearch type)
-        {
-            _safeSearch = type;
-            return this;
-        }
-
-
-        public SearchImagesAttachmentBuilder SetImageLicense(ImageLicense license)
-        {
-            _imageLicense = license;
-            return this;
-        }
-
-        public SearchImagesAttachmentBuilder SetImageType(ImageType type)
-        {
-            _imageType = type;
-            return this;
-        }
-
-        public SearchImagesAttachmentBuilder SetImageFileMaxSize(int size)
-        {
-            _maxImageFileSize = size;
-            return this;
-        }
-
-        public SearchImagesAttachmentBuilder SetImageFileMinSize(int size)
-        {
-            _minImageFileSize = size;
-            return this;
-        }
-
-        public SearchImagesAttachmentBuilder SetImageExtensionMaxSize(Size size)
-        {
-            _maxImageExtensionSize = size;
-            return this;
-        }
-
-        public SearchImagesAttachmentBuilder SetImageExtensionMinSize(Size size)
-        {
-            _minImageExtensionSize = size;
-            return this;
         }
 
         private string SafeSearchToBingSaveSearchString(SafeSearch safeSearch)
@@ -161,30 +95,30 @@ namespace Rovecode.Assistant.Tools.Builders.Bing
 
         private Uri BuildRequestUri()
         {
-            var link = new Uri(_context.Configuration.Info.Bing.Link + "/bing/v7.0/images/search");
+            var link = new Uri(_context.AppContext.Info.Bing.Link + "/bing/v7.0/images/search");
 
             link = link.AddQuery("q", string.Join("+", _searchKey));
 
-            link = link.AddQuery("count", _count.ToString());
-            link = link.AddQuery("offset", _offset.ToString());
+            link = link.AddQuery("count", Count.ToString());
+            link = link.AddQuery("offset", Offset.ToString());
 
-            link = link.AddQuery("maxFileSize", _maxImageFileSize.ToString());
-            link = link.AddQuery("minFileSize", _minImageFileSize.ToString());
+            link = link.AddQuery("maxFileSize", MaxImageFileSize.ToString());
+            link = link.AddQuery("minFileSize", MinImageFileSize.ToString());
 
-            link = link.AddQuery("minWidth", _minImageExtensionSize.Width.ToString());
-            link = link.AddQuery("minHeight", _minImageExtensionSize.Height.ToString());
+            link = link.AddQuery("minWidth", MinImageExtensionSize.Width.ToString());
+            link = link.AddQuery("minHeight", MinImageExtensionSize.Height.ToString());
 
-            link = link.AddQuery("maxWidth", _maxImageExtensionSize.Width.ToString());
-            link = link.AddQuery("maxHeight", _maxImageExtensionSize.Height.ToString());
+            link = link.AddQuery("maxWidth", MaxImageExtensionSize.Width.ToString());
+            link = link.AddQuery("maxHeight", MaxImageExtensionSize.Height.ToString());
 
-            link = link.AddQuery("license", ImageLicenseToBingImageLicenseString(_imageLicense));
+            link = link.AddQuery("license", ImageLicenseToBingImageLicenseString(ImageLicense));
 
-            link = link.AddQuery("safeSearch", SafeSearchToBingSaveSearchString(_safeSearch));
+            link = link.AddQuery("safeSearch", SafeSearchToBingSaveSearchString(SafeSearch));
 
-            link = link.AddQuery("imageType", ImageTypeToBingImageTypeString(_imageType));
+            link = link.AddQuery("imageType", ImageTypeToBingImageTypeString(ImageType));
 
-            link = link.AddQuery("cc", _context.Configuration.Info.Application.TargetLanguage);
-            link = link.AddQuery("setLang", _context.Configuration.Info.Application.TargetLanguage);
+            link = link.AddQuery("cc", _context.AppContext.Info.Application.TargetLanguage);
+            link = link.AddQuery("setLang", _context.AppContext.Info.Application.TargetLanguage);
 
             return link;
         }
@@ -198,7 +132,7 @@ namespace Rovecode.Assistant.Tools.Builders.Bing
             var client = new HttpClient();
 
             client.DefaultRequestHeaders
-                .Add("Ocp-Apim-Subscription-Key", _context.Configuration.Info.Bing.Token);
+                .Add("Ocp-Apim-Subscription-Key", _context.AppContext.Info.Bing.Token);
 
             var result = await client.GetAsync(link);
 
@@ -238,18 +172,19 @@ namespace Rovecode.Assistant.Tools.Builders.Bing
         public override IImagesAttachment Build()
         {
             var result = BuildAndSendHttpResuest();
+
             result.Wait(TimeSpan.FromSeconds(3));
 
-            if (result.IsCompletedSuccessfully)
-            {
-                _value.Images = result.Result;
-            }
-            else
+            if (!result.IsCompletedSuccessfully)
             {
                 throw new AssistantException("http request to the bing server canseled with error");
             }
 
-            return _value;
+            return new ImagesAttachment
+            {
+                Images = result.Result,
+                Source = WebSource.Bing,
+            };
         }
     }
 }

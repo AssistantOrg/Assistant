@@ -10,10 +10,10 @@ namespace Rovecode.Assistant.Ferry.Contexts
 {
     public class CommandContext : ICommandContext
     {
-        public IReceiveMessage Message { get; set; } = new ReceiveMessage();
+        public IReceiveMessage Message { get; set; }
 
-        public IUser User { get; set; } = new User();
+        public IUser User { get; set; }
 
-        public IApplicationContext Configuration { get; set; }
+        public IApplicationContext AppContext { get; set; }
     }
 }

@@ -26,7 +26,7 @@ namespace Rovecode.Assistant.Persistence.Services.Storages
             _type = type;
 
             _repository = new DatabaseRepository<IStorageServiceEntity<T>>(
-                context.Configuration.Database
+                context.AppContext.Database
                     .GetCollection<IStorageServiceEntity<T>>("storage"));
         }
 

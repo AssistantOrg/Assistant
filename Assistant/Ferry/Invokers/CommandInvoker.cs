@@ -7,11 +7,11 @@ using Rovecode.Assistant.Facade.Domain.Commands;
 using Rovecode.Assistant.Facade.Domain.Messages;
 using Rovecode.Assistant.Facade.Ferry.Commands;
 using Rovecode.Assistant.Facade.Ferry.Contexts;
-using Rovecode.Assistant.Facade.Ferry.Managers;
+using Rovecode.Assistant.Facade.Ferry.Invokers;
 
-namespace Rovecode.Assistant.Ferry.Managers
+namespace Rovecode.Assistant.Ferry.Invokers
 {
-    public class CommandsManager : ICommandsManager
+    public class CommandInvoker : ICommandInvoker
     {
         public List<ICommand> Commands { get; } = new List<ICommand>();
         public ICommand DefaultCommand { get; set; }

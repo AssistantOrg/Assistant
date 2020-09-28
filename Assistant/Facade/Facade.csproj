@@ -33,7 +33,7 @@
     <Folder Include="Ferry\" />
     <Folder Include="Persistence\" />
     <Folder Include="Ferry\Commands\" />
-    <Folder Include="Ferry\Managers\" />
+    <Folder Include="Ferry\Invokers\" />
     <Folder Include="Ferry\Contexts\" />
     <Folder Include="Domain\Common\" />
     <Folder Include="Persistence\Repositories\" />

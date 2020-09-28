@@ -7,7 +7,6 @@ using Rovecode.Assistant.Facade.Domain.Commands;
 using Rovecode.Assistant.Facade.Domain.Messages;
 using Rovecode.Assistant.Facade.Ferry.Commands;
 using Rovecode.Assistant.Facade.Ferry.Contexts;
-using Rovecode.Assistant.Ferry.Managers;
 using Rovecode.Assistant.Persistence.Services.Storages;
 using Rovecode.Assistant.Persistence.Services.Users;
 using Rovecode.Assistant.Tools.Builders;
@@ -115,10 +114,11 @@ namespace Tests.Common
 
             UserToken token = await service.AuthAsync("dina");
 
-            var context = new AssistantContextBuilder(configuration)
-                .SetText("test")
-                .SetIdentifier(token.Token)
-                .Build();
+            var context = new CommandContextBuilder(configuration)
+            {
+                Text = "test",
+                IdentifyToken = token,
+            }.Build();
 
 
             await configuration.Manager.RunAsync(context);
