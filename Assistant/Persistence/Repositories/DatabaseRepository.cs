@@ -78,7 +78,7 @@ namespace Rovecode.Assistant.Persistence.Repositories
 
         public void ReplaceOne(FilterDefinition<T> filter, T value)
         {
-            _collection.ReplaceOne(filter, value, new ReplaceOptions { IsUpsert = true });
+            _collection.ReplaceOne(filter, value);
         }
 
         public Task ReplaceOneAsync(FilterDefinition<T> filter, T value)

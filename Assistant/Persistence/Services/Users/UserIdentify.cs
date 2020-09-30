@@ -68,7 +68,7 @@ namespace Rovecode.Assistant.Persistence.Services.Users
         {
             if (IsExistsByLogin(user.Login))
             {
-                throw new AssistantException();
+                return;
             }
 
             await _userRepository.InsertOneAsync(user);

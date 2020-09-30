@@ -6,7 +6,7 @@ namespace Rovecode.Assistant.Application.Helpers
 {
     public static class SecureHelper
     {
-        static string SHA512(string data)
+        public static string SHA512(string data)
         {
             var crypt = new SHA512Managed();
             string hash = String.Empty;

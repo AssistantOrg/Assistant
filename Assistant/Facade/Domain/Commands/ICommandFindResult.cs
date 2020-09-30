@@ -6,7 +6,7 @@ namespace Rovecode.Assistant.Facade.Domain.Commands
 {
     public interface ICommandFindResult
     {
-        public ICommand Command { get; set; }
+        public Type CommandType { get; set; }
 
         public IEnumerable<string> ExecuteCommandKey { get; set; }
     }

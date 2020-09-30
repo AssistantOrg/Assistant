@@ -2,7 +2,7 @@
 
 namespace Rovecode.Assistant.Facade.Domain.Common
 {
-    public interface IDatabaseModernEntiry : IDatabaseEntity
+    public interface IDatabaseModernEntity : IDatabaseEntity
     {
         Version MinVersion { get; set; }
 

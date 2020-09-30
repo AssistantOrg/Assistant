@@ -4,7 +4,7 @@ using Rovecode.Assistant.Facade.Domain.Common;
 
 namespace Rovecode.Assistant.Domain.Common
 {
-    public class DatabaseModernEntity : DatabaseEntity, IDatabaseModernEntiry
+    public class DatabaseModernEntity : DatabaseEntity, IDatabaseModernEntity
     {
         public Version MinVersion { get; set; }
         public DateTime CreatedTime { get; set; }

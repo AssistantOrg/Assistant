@@ -1,5 +1,11 @@
 using System;
+using System.Linq;
+using System.Reflection;
+using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
 using Rovecode.Assistant.Application.Attributes;
+using Rovecode.Assistant.Application.Helpers;
+using Rovecode.Assistant.Domain.Application;
 using Rovecode.Assistant.Domain.Commands;
 using Rovecode.Assistant.Domain.Messages;
 using Rovecode.Assistant.Domain.Users;
@@ -7,6 +13,7 @@ using Rovecode.Assistant.Facade.Domain.Commands;
 using Rovecode.Assistant.Facade.Domain.Messages;
 using Rovecode.Assistant.Facade.Ferry.Commands;
 using Rovecode.Assistant.Facade.Ferry.Contexts;
+using Rovecode.Assistant.Facade.Persistence.Services;
 using Rovecode.Assistant.Persistence.Services.Storages;
 using Rovecode.Assistant.Persistence.Services.Users;
 using Rovecode.Assistant.Tools.Builders;
@@ -26,13 +33,15 @@ namespace Tests.Common
 
     public class TestCommand : ICommand
     {
-        [Injection]
-        public CommandStorage<TestModel> _storage1 { get; set; }
+        private static int _count;
 
-        [Injection]
-        public CommandStorage<StateModel> _storage2 { get; set; }
+        [Injection(IsAuto = false)]
+        public CommandStorage<StateModel> _str2 { get; set; }
 
-        public ICommandInfo Info => new CommandInfo
+        [Injection(IsAuto = false)]
+        public CommandStorage<TestModel> _str1 { get; set; }
+
+        public static ICommandInfo Info => new CommandInfo
         {
             Priority = 0,
             Keys = new[]
@@ -43,85 +52,82 @@ namespace Tests.Common
 
         public IDispatchMessage Execute(ICommandContext context)
         {
-            _storage1.Data.Count++;
-
-            _storage2.Data.IsWalk = !_storage2.Data.IsWalk;
+            _count++;
 
             return new DispatchMessage
             {
-                Text = _storage1.Data.Count.ToString()
+                Text = $"test {context.User.FirstName} {context.User.LastName} {context.User.Login} {_count}", //_storage1.Data.Count.ToString()
             };
         }
     }
 
     public class UnitTest1
     {
-        private IApplicationContext BuildConfiguration()
+
+        [Fact]
+        public void Test0()
         {
-            //var configuration = new Configuration();
-
-            //// adds commands
-            //configuration.Manager = new CommandsManager();
-
-            //// set info
-            //configuration.Info = new ConfigurationInfo
-            //{
-            //    Application = new ConfigurationApplicationInfo
-            //    {
-            //        AppName = "test",
-            //        TargetLanguage = "ru",
-            //        ExecuteAssistantKeys = new[] { new[] { "khvatov" } },
-            //        Version = new Version(0, 0, 1),
-            //    },
-            //    Database = new ConfigurationDatabaseInfo
-            //    {
-            //        ConnectionLink = new Uri("mongodb://assistantmongodb:9aTychpSH46dzlC3b5OIjgOpvTfXkaiiuJfDQ09BYvabvlM9hGD0227pUx3LbXCehQ3XYOnITAPB2k1K7l9PUg==@assistantmongodb.mongo.cosmos.azure.com:10255/?ssl=true&replicaSet=globaldb&retrywrites=false&maxIdleTimeMS=120000&appName=@assistantmongodb@"),
-            //        Name = "felix",
-            //    },
-            //    Bing = new ConfigurationBingInfo
-            //    {
-            //        Link = new Uri("https://felixedu.cognitiveservices.azure.com/"),
-            //        Token = "377d85c49d9d4e3284f6cc8604f218ea",
-            //    },
-            //};
-
-            //// init 
-            //configuration.Init();
-
-            //return configuration;
-
-            return null;
+            //properties.ForEach(e => System.Activator.CreateInstance(e.PropertyType, new object[] { null, e.PropertyType }));
         }
 
         [Fact]
         public async void Test1()
         {
-            var configuration = BuildConfiguration();
-
-            var service = new UserIdentify(configuration);
-
-            if (!service.IsExistsBySecret("dina"))
+            var appCtxBuilder = new ApplicationContextBuilder
             {
-                var user = new User
+                Info = new ApplicationInfo
                 {
-                    FirstName = "Roman",
-                    LastName = "Suslikov",
-                    Secret = "dina"
-                };
+                    Application = new ApplicationAppInfo
+                    {
+                        AppName = "test_0.3.2",
+                        TargetLanguage = "en",
+                        ExecuteAssistantKeys = new[] { new[] { "bot" } },
+                        Version = new Version(0, 3, 2),
+                    },
+                    Database = new ApplicationDatabaseInfo
+                    {
+                        Name = "felix",
+                        ConnectionLink = new Uri("mongodb://assistantmongodb:9aTychpSH46dzlC3b5OIjgOpvTfXkaiiuJfDQ09BYvabvlM9hGD0227pUx3LbXCehQ3XYOnITAPB2k1K7l9PUg==@assistantmongodb.mongo.cosmos.azure.com:10255/?ssl=true&replicaSet=globaldb&retrywrites=false&maxIdleTimeMS=120000&appName=@assistantmongodb@"),
+                    },
+                    Bing = new ApplicationBingInfo
+                    {
+                        Link = new Uri("https://felixedu.cognitiveservices.azure.com/"),
+                        Token = "377d85c49d9d4e3284f6cc8604f218ea",
+                    },
+                },
+            };
 
-                await service.CreateAsync(user);
-            }
+            appCtxBuilder.Manager.Commands.Add(typeof(TestCommand));
+            // appCtxBuilder.Manager.DefaultCommand = typeof(TestCommand();
 
-            UserToken token = await service.AuthAsync("dina");
+            var appCtx = appCtxBuilder.Build();
 
-            var context = new CommandContextBuilder(configuration)
+            var service = new UserIdentify(appCtx);
+
+            var user = new User
             {
-                Text = "test",
-                IdentifyToken = token,
+                FirstName = "Roman",
+                LastName = "Suslikov",
+                Login = "dina",
+                Password = SecureHelper.SHA512("dina"),
+            };
+
+            //await service.CreateAsync(user);
+
+            //UserToken token = await service.AuthAsync(user);
+
+            var commCtx = new CommandContextBuilder(appCtx)
+            {
+                Text = "bot test",
+                IdentifyToken = new UserToken { Token = "vEp1xmfLhvG66FA5vCHZd38u" },
             }.Build();
 
+            for (int i = 0; i < 100; i++)
+            {
+                var resultT = await appCtx.Manager.RunAsync(commCtx);
 
-            await configuration.Manager.RunAsync(context);
+                Console.WriteLine(resultT.ToJson());
+            }
 
             Assert.True(true);
         }

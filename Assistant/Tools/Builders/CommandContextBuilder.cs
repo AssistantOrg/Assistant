@@ -4,6 +4,8 @@ using System.Linq;
 using Rovecode.Assistant.Application.Builders;
 using Rovecode.Assistant.Application.Exceptions;
 using Rovecode.Assistant.Application.Helpers;
+using Rovecode.Assistant.Domain.Messages;
+using Rovecode.Assistant.Domain.Models;
 using Rovecode.Assistant.Domain.Users;
 using Rovecode.Assistant.Facade.Ferry.Contexts;
 using Rovecode.Assistant.Ferry.Contexts;
@@ -49,6 +51,8 @@ namespace Rovecode.Assistant.Tools.Builders
 
         private void SetMessage(ref CommandContext ctx)
         {
+            ctx.Message = new ReceiveMessage();
+
             SetTextKey(ref ctx);
             SetExecuteKey(ref ctx);
             SetCommandKey(ref ctx);

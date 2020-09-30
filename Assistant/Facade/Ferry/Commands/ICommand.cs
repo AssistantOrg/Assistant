@@ -8,7 +8,13 @@ namespace Rovecode.Assistant.Facade.Ferry.Commands
 {
     public interface ICommand
     {
-        public ICommandInfo Info { get; }
+        public static ICommandInfo Info
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+        }
 
         public IDispatchMessage Execute(ICommandContext context);
     }

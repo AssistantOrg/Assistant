@@ -7,7 +7,7 @@ namespace Rovecode.Assistant.Domain.Commands
 {
     public class CommandFindResult : ICommandFindResult
     {
-        public ICommand Command { get; set; }
+        public Type CommandType { get; set; }
 
         public IEnumerable<string> ExecuteCommandKey { get; set; }
     }
