@@ -1,13 +1,36 @@
-<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk"> 
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <ReleaseVersion>0.2.5</ReleaseVersion>
+    <PackageId>Rovecode.Assistant.Domain</PackageId>
+    <IsPackable>true</IsPackable>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <Version>0.3.5</Version>
+    <Authors>Roman Suslikov</Authors>
+    <Copyright>Roman Suslikov</Copyright>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageProjectUrl>https://github.com/Assistants-org/Assistant</PackageProjectUrl>
+    <Product>Domain</Product>
+    <RepositoryUrl>https://github.com/Assistants-org/Assistant</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <ReleaseVersion>0.3.6</ReleaseVersion>
     <RootNamespace>Rovecode.Assistant.Domain</RootNamespace>
   </PropertyGroup>
 
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\..\Build\Assistant\Debug</OutputPath>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>..\..\Build\Assistant\Release</OutputPath>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+  </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Facade\Facade.csproj" />
+    <None Include="..\..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Common\" />
@@ -17,5 +40,8 @@
     <Folder Include="Models\" />
     <Folder Include="Persistence\" />
     <Folder Include="Users\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Facade\Facade.csproj" />
   </ItemGroup>
 </Project>

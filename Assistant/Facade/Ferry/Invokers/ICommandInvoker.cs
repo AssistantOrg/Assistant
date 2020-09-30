@@ -10,8 +10,8 @@ namespace Rovecode.Assistant.Facade.Ferry.Invokers
 {
     public interface ICommandInvoker
     {
-        public List<Type> Commands { get; }
-        public Type DefaultCommand { get; set; }
+        public List<Type> CommandsTypes { get; }
+        public Type DefaultCommandType { get; set; }
 
         public Task<IDispatchMessage> RunAsync(ICommandContext context);
     }

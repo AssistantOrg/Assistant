@@ -97,8 +97,8 @@ namespace Tests.Common
                 },
             };
 
-            appCtxBuilder.Manager.Commands.Add(typeof(TestCommand));
-            // appCtxBuilder.Manager.DefaultCommand = typeof(TestCommand();
+            appCtxBuilder.Invoker.CommandsTypes.Add(typeof(TestCommand));
+            appCtxBuilder.Invoker.DefaultCommandType = typeof(TestCommand);
 
             var appCtx = appCtxBuilder.Build();
 
@@ -118,13 +118,13 @@ namespace Tests.Common
 
             var commCtx = new CommandContextBuilder(appCtx)
             {
-                Text = "bot test",
+                Text = "bot tst",
                 IdentifyToken = new UserToken { Token = "vEp1xmfLhvG66FA5vCHZd38u" },
             }.Build();
 
             for (int i = 0; i < 100; i++)
             {
-                var resultT = await appCtx.Manager.RunAsync(commCtx);
+                var resultT = await appCtx.Invoker.RunAsync(commCtx);
 
                 Console.WriteLine(resultT.ToJson());
             }

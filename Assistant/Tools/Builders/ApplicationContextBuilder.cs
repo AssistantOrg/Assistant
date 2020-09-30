@@ -18,11 +18,11 @@ namespace Rovecode.Assistant.Tools.Builders
     {
         public IApplicationInfo Info { get; set; }
 
-        public ICommandInvoker Manager { get; }
+        public ICommandInvoker Invoker { get; }
 
         public ApplicationContextBuilder()
         {
-            Manager = new CommandInvoker();
+            Invoker = new CommandInvoker();
 
             //// TODO: rm . x}
 
@@ -81,7 +81,7 @@ namespace Rovecode.Assistant.Tools.Builders
             return new ApplicationContext
             {
                 Info = Info,
-                Manager = Manager,
+                Invoker = Invoker,
                 Database = ConnectToDB(Info.Database.ConnectionLink.ToString()),
             };
         }

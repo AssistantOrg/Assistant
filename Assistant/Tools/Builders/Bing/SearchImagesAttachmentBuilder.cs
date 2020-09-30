@@ -19,7 +19,7 @@ namespace Rovecode.Assistant.Tools.Builders.Bing
 {
     public class SearchImagesAttachmentBuilder : ContextBuilder<IImagesAttachment>
     {
-        private IEnumerable<string> _searchKey;
+        public IEnumerable<string> SearchKey { get; set; }
 
         public int Count { get; set; } = 5;
         public int Offset { get; set; } = 0;
@@ -97,7 +97,7 @@ namespace Rovecode.Assistant.Tools.Builders.Bing
         {
             var link = new Uri(_context.AppContext.Info.Bing.Link + "/bing/v7.0/images/search");
 
-            link = link.AddQuery("q", string.Join("+", _searchKey));
+            link = link.AddQuery("q", string.Join("+", SearchKey));
 
             link = link.AddQuery("count", Count.ToString());
             link = link.AddQuery("offset", Offset.ToString());

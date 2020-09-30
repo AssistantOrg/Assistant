@@ -17,8 +17,8 @@ namespace Rovecode.Assistant.Ferry.Invokers
 {
     public class CommandInvoker : ICommandInvoker
     {
-        public List<Type> Commands { get; } = new List<Type>();
-        public Type DefaultCommand { get; set; }
+        public List<Type> CommandsTypes { get; } = new List<Type>();
+        public Type DefaultCommandType { get; set; }
 
         public Task<IDispatchMessage> RunAsync(ICommandContext context)
         {
@@ -99,7 +99,7 @@ namespace Rovecode.Assistant.Ferry.Invokers
 
         private IEnumerable<CommandFindResult> CommandsTypesToCommandsFindResults()
         {
-            return Commands
+            return CommandsTypes
                 .Select(e => new CommandFindResult { CommandType = e });
         }
 
@@ -124,11 +124,11 @@ namespace Rovecode.Assistant.Ferry.Invokers
 
             List<CommandFindResult> findResult = FindCommandMatchesByCtx(commandsFR, context).ToList();
 
-            if (findResult.Count == 0 && DefaultCommand != null)
+            if (findResult.Count == 0 && DefaultCommandType != null)
             {
-                findResult.ToList().Add(new CommandFindResult
+                findResult.Add(new CommandFindResult
                 {
-                    CommandType = DefaultCommand,
+                    CommandType = DefaultCommandType,
                     ExecuteCommandKey = new string[] { },
                 });
             }

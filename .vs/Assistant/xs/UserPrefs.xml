@@ -1,77 +1,33 @@
 ﻿<Properties StartupConfiguration="{2ACF6852-5BF3-4886-9F56-2F0EA3174FCF}|Модульные тесты">
   <MonoDevelop.Ide.ItemProperties.Tests.Assistant.Tests.Common PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.ItemProperties.Tests.Assistant.Tests.Application PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Tests/Tests.Common/UnitTest1.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assistant/Facade/Ferry/Invokers/ICommandInvoker.cs">
     <Files>
-      <File FileName="Assistant/Ferry/Invokers/CommandInvoker.cs" Line="58" Column="67" />
-      <File FileName="Assistant/Facade/Persistence/Services/IStorageService.cs" Line="5" Column="22" />
-      <File FileName="Assistant/Facade/Persistence/Services/ICommandStorage.cs" Line="5" Column="37" />
-      <File FileName="Assistant/Facade/Ferry/Invokers/ICommandInvoker.cs" Line="1" Column="1" />
-      <File FileName="Assistant/Facade/Ferry/Commands/ICommand.cs" Line="1" Column="1" />
-      <File FileName="Assistant/Facade/Domain/Commands/ICommandFindResult.cs" Line="1" Column="1" />
-      <File FileName="Assistant/Domain/Commands/CommandFindResult.cs" Line="1" Column="1" />
-      <File FileName="Assistant/Persistence/Services/Storages/CommandStorage.cs" Line="19" Column="50" />
-      <File FileName="Assistant/Facade/Ferry/Contexts/ICommandContext.cs" Line="12" Column="1" />
-      <File FileName="Assistant/Ferry/Contexts/ApplicationContext.cs" Line="13" Column="51" />
-      <File FileName="Assistant/Application/Attributes/InjectionAttribute.cs" Line="8" Column="1" />
-      <File FileName="Assistant/Persistence/Services/Users/UserIdentify.cs" Line="1" Column="1" />
-      <File FileName="Tests/Tests.Common/UnitTest1.cs" Line="42" Column="61" />
+      <File FileName="Tests/Tests.Common/UnitTest1.cs" Line="127" Column="55" />
+      <File FileName="Assistant/Tools/Builders/ApplicationContextBuilder.cs" />
+      <File FileName="Assistant/Ferry/Invokers/CommandInvoker.cs" />
+      <File FileName="Assistant/Facade/Ferry/Contexts/IApplicationContext.cs" />
+      <File FileName="Assistant/Tools/Builders/Bing/SearchImagesAttachmentBuilder.cs" />
+      <File FileName="Assistant/Facade/Ferry/Invokers/ICommandInvoker.cs" Line="11" Column="37" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Assistant" expanded="True">
+          <Node name="Assistant" expanded="True" selected="True">
             <Node name="Assistant" expanded="True">
               <Node name="1.Core" expanded="True">
-                <Node name="Application" expanded="True">
-                  <Node name="Attributes" expanded="True" />
-                </Node>
-                <Node name="Domain" expanded="True">
-                  <Node name="Commands" expanded="True" />
-                  <Node name="Common" expanded="True" />
-                  <Node name="Persistence" expanded="True" />
-                </Node>
                 <Node name="Facade" expanded="True">
-                  <Node name="Domain" expanded="True">
-                    <Node name="Commands" expanded="True" />
-                    <Node name="Persistence" expanded="True" />
-                  </Node>
                   <Node name="Ferry" expanded="True">
-                    <Node name="Commands" expanded="True" />
-                    <Node name="Contexts" expanded="True" />
                     <Node name="Invokers" expanded="True" />
                   </Node>
-                  <Node name="Persistence" expanded="True">
-                    <Node name="Services" expanded="True" />
-                  </Node>
                 </Node>
               </Node>
-              <Node name="2.Infrastructure" expanded="True">
-                <Node name="Ferry" expanded="True">
-                  <Node name="Contexts" expanded="True" />
-                  <Node name="Invokers" expanded="True" />
-                </Node>
-                <Node name="Persistence" expanded="True">
-                  <Node name="Repositories" expanded="True" />
-                  <Node name="Services" expanded="True">
-                    <Node name="Storages" expanded="True" />
-                    <Node name="Users" expanded="True" />
-                  </Node>
-                </Node>
-              </Node>
-              <Node name="3.Auxiliary" expanded="True">
-                <Node name="Tools" expanded="True">
-                  <Node name="Builders" expanded="True">
-                    <Node name="Bing" expanded="True" />
-                  </Node>
-                </Node>
-              </Node>
+              <Node name="2.Infrastructure" expanded="True" />
+              <Node name="3.Auxiliary" expanded="True" />
             </Node>
             <Node name="Tests" expanded="True">
               <Node name="Assistant" expanded="True">
-                <Node name="Tests.Common" expanded="True">
-                  <Node name="UnitTest1.cs" selected="True" />
-                </Node>
+                <Node name="Tests.Common" expanded="True" />
               </Node>
             </Node>
           </Node>

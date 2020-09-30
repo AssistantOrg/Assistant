@@ -8,7 +8,7 @@ namespace Rovecode.Assistant.Ferry.Contexts
 {
     public class ApplicationContext : IApplicationContext
     {
-        public ICommandInvoker Manager { get; set; }
+        public ICommandInvoker Invoker { get; set; }
         public IMongoDatabase Database { get; set; }
         public IApplicationInfo Info { get; set; }
     }
