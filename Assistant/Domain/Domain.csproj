@@ -5,7 +5,7 @@
     <PackageId>Rovecode.Assistant.Domain</PackageId>
     <IsPackable>true</IsPackable>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <Version>0.3.7</Version>
+    <Version>0.3.8</Version>
     <Authors>Roman Suslikov</Authors>
     <Copyright>Roman Suslikov</Copyright>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
