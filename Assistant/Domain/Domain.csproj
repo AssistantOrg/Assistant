@@ -14,7 +14,7 @@
     <RepositoryUrl>https://github.com/Assistants-org/Assistant</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <ReleaseVersion>0.3.7</ReleaseVersion>
+    <ReleaseVersion>0.3.8</ReleaseVersion>
     <RootNamespace>Rovecode.Assistant.Domain</RootNamespace>
   </PropertyGroup>
 

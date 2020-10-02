@@ -41,13 +41,15 @@ namespace Tests.Common
             Priority = 0,
             Keys = new[]
             {
-                new[] { "test" },
+                new[] { "t" },
             },
         };
 
         public IDispatchMessage Execute(ICommandContext context)
         {
             _count++;
+
+            return null;
 
             return new DispatchMessage
             {
@@ -67,7 +69,7 @@ namespace Tests.Common
             Priority = 0,
             Keys = new[]
             {
-                new[] { "test1" },
+                new[] { "test" },
             },
         };
 
@@ -77,9 +79,11 @@ namespace Tests.Common
 
             _str2.Data ??= new StateModel();
 
+            return null;
+
             return new DispatchMessage
             {
-                Text = $"test2 {context.User.FirstName} {context.User.LastName} {context.User.Login} {_count}", //_storage1.Data.Count.ToString()
+                Text = $"test2 2", //_storage1.Data.Count.ToString()
             };
         }
     }
@@ -122,7 +126,7 @@ namespace Tests.Common
 
             appCtxBuilder.Invoker.CommandsTypes.Add(typeof(TestCommand));
             appCtxBuilder.Invoker.CommandsTypes.Add(typeof(TestCommand2));
-            appCtxBuilder.Invoker.DefaultCommandType = typeof(TestCommand2);
+            appCtxBuilder.Invoker.DefaultCommandType = typeof(TestCommand);
 
             var appCtx = appCtxBuilder.Build();
 
@@ -140,25 +144,25 @@ namespace Tests.Common
 
             //UserToken token = await service.AuthAsync(user);
 
-            ICommandContext commCtx1 = new CommandContextBuilder(appCtx)
-            {
-                Text = "bot tst",
-                IdentifyToken = new UserToken { Token = "vEp1xmfLhvG66FA5vCHZd38u" },
-            }.Build();
+            //ICommandContext commCtx1 = new CommandContextBuilder(appCtx)
+            //{
+            //    Text = "bot tst",
+            //    IdentifyToken = new UserToken { Token = "vEp1xmfLhvG66FA5vCHZd38u" },
+            //}.Build();
 
             ICommandContext commCtx2 = new CommandContextBuilder(appCtx)
             {
-                Text = "bot test2",
+                Text = "bot test",
                 IdentifyToken = new UserToken { Token = "vEp1xmfLhvG66FA5vCHZd38u" },
             }.Build();
 
-            var resultT = await appCtx.Invoker.RunAsync(commCtx1);
+            var resultT = await appCtx.Invoker.RunAsync(commCtx2);
 
             Console.WriteLine(resultT.ToJson());
 
-            resultT = await appCtx.Invoker.RunAsync(commCtx2);
+            //resultT = await appCtx.Invoker.RunAsync(commCtx2);
 
-            Console.WriteLine(resultT.ToJson());
+            //Console.WriteLine(resultT.ToJson());
 
 
             Assert.True(true);

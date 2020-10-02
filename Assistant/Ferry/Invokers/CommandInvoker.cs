@@ -93,6 +93,11 @@ namespace Rovecode.Assistant.Ferry.Invokers
                 }
             }
 
+            if (DefaultCommandType != null)
+            {
+                return await ReflectionExecuteCommandAsync(DefaultCommandType, context);
+            }
+
             return null;
         }
 
@@ -122,15 +127,6 @@ namespace Rovecode.Assistant.Ferry.Invokers
             List<CommandFindResult> commandsFR = CommandsTypesToCommandsFindResults().ToList();
 
             List<CommandFindResult> findResult = FindCommandMatchesByCtx(commandsFR, context).ToList();
-
-            if (findResult.Count == 0 && DefaultCommandType != null)
-            {
-                findResult.Add(new CommandFindResult
-                {
-                    CommandType = DefaultCommandType,
-                    ExecuteCommandKey = new string[] { },
-                });
-            }
 
             return findResult;
         }
