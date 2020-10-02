@@ -25,17 +25,16 @@ namespace Rovecode.Assistant.Ferry.Invokers
             return TryExecuteCommandsAsync(context, FindCommands(context));
         }
 
-        private List<PropertyInfo> ReflectInjectionProperties(Assembly ass)
+        private List<FieldInfo> ReflectInjectionProperties(Type cmt)
         {
-            return ass.GetTypes()
-                .SelectMany(t => t.GetProperties())
-                .Where(m => m.GetCustomAttributes(typeof(InjectionAttribute), false).Length > 0
-                    && m.PropertyType.GetInterfaces().Any(x =>
-                        x.IsGenericType && x.GetGenericTypeDefinition() == typeof(IStorageService<>)))
-                         .ToList();
+            return cmt.GetFields(BindingFlags.Instance | BindingFlags.NonPublic).ToList()
+                .FindAll(m => m.GetCustomAttributes(typeof(InjectionAttribute), false).Length > 0
+                    && m.IsInitOnly
+                        && m.FieldType.GetInterfaces().Any(x =>
+                            x.IsGenericType && x.GetGenericTypeDefinition() == typeof(IStorageService<>)));
         }
 
-        private InjectionAttribute ReflectInjectionAttribute(PropertyInfo type)
+        private InjectionAttribute ReflectInjectionAttribute(FieldInfo type)
         {
             return (InjectionAttribute)type.GetCustomAttributes(typeof(InjectionAttribute), false)[0];
         }
@@ -46,11 +45,11 @@ namespace Rovecode.Assistant.Ferry.Invokers
 
             // get storages injections
             var injectionsProperties
-                = ReflectInjectionProperties(Assembly.GetAssembly(command.GetType()));
+                = ReflectInjectionProperties(command.GetType());
 
             // init injection
             injectionsProperties.ForEach(e => e.SetValue(command,
-                Activator.CreateInstance(e.PropertyType,
+                Activator.CreateInstance(e.FieldType,
                     new object[] { context, type })));
 
             // get injections values
